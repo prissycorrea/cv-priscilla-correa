@@ -1,7 +1,7 @@
 import MenuLink from "../MenuLink/MenuLink";
-import menuLinksStyles from "./MenuLinks.style";
+import menuLinksStyles from "./MenuLinksContainer.style";
 
-const MenuLinks = () => {
+const MenuLinksContainer = () => {
     return (
         <menuLinksStyles>
             <MenuLink href="/home">Home</MenuLink>
@@ -13,4 +13,4 @@ const MenuLinks = () => {
     )
 }
 
-export default MenuLinks;
+export default MenuLinksContainer;
