@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "push": "sh -c 'read -p \"Digite a mensagem de commit: \" msg && git add . && git commit -m \"$msg\" && git push origin $(git rev-parse --abbrev-ref HEAD)'"
+    "push": "sh -c 'read -p \"Digite a mensagem de commit: \" msg && git add . && git commit -m \"$msg\" && git push origin $(git symbolic-ref --short HEAD)'"
   },
   "eslintConfig": {
     "extends": [
