@@ -1,4 +1,34 @@
+:root {
+  --hover-text-color: #986DFF;
+  --text-color: #999999;
+  --background-color: #111111;
+  --title-text-color: #ffffff;
+  --highlight-text-color: #986DFF;
+}
+
 * {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+html {
+  overflow-y: scroll; /* Garante que a barra de rolagem esteja sempre presente */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: calc(100vw - (100vw - 100%));
+}
+
+header {
+  height: 10vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-text-color);
 }

@@ -1,11 +1,8 @@
-import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 
-const navbar = css`
+const navbar = styled.div`
+  background-color: red;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #333;
-  color: white;
   padding: 10px;
 `;
 

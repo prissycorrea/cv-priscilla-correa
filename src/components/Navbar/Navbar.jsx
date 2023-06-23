@@ -1,17 +1,16 @@
 import navbar from "./Navbar.styles";
-import Logo from "../Logo/Logo"
+import Logo from "../Logo/Logo";
 import MenuLinks from "../MenuLinksContainer/MenuLinksContainer";
 
 const Navbar = () => {
-    return (
-      <div>
-        <header css={navbar}>
-            <Logo />
-            <MenuLinks />
-        </header>
-      </div>
-    );
-  };
-  
+  return (
+    <>
+      <header css={navbar}>
+        <Logo />
+        <MenuLinks />
+      </header>
+    </>
+  );
+};
 
-  export default Navbar;
+export default Navbar;

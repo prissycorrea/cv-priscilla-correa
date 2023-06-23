@@ -1,6 +1,6 @@
-import {css} from "@emotion/react";
+import styled from '@emotion/styled';
 
-const menuLinkStyles = css`
+const menuLinkStyles = styled.a`
     color: green;
     text-decoration: none;
 `

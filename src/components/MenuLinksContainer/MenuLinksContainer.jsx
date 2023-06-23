@@ -1,15 +1,15 @@
 import MenuLink from "../MenuLink/MenuLink";
-import menuLinksStyles from "./MenuLinksContainer.style";
+import menuLinksContainerStyles from "./MenuLinksContainer.styles";
 
 const MenuLinksContainer = () => {
     return (
-        <menuLinksStyles>
+        <div css={menuLinksContainerStyles}>
             <MenuLink href="/home">Home</MenuLink>
             <MenuLink href="/about">About</MenuLink>
             <MenuLink href="/skills">Skills</MenuLink>
             <MenuLink href="/portfolio">Portfolio</MenuLink>
             <MenuLink href="/contact">Contact</MenuLink>
-        </menuLinksStyles>
+        </div>
     )
 }
 
