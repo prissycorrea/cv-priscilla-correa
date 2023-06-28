@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
 :root {
   --hover-text-color: #986DFF;
   --text-color: #999999;
   --background-color: #111111;
   --title-text-color: #ffffff;
   --highlight-text-color: #986DFF;
+  --default-font: 'Roboto', sans-serif;
 }
 
 * {
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: var(--default-font);
 }
 
 html {
@@ -31,4 +35,54 @@ a {
 
 a:hover {
   color: var(--hover-text-color);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--highlight-text-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-text-color);
+  border-radius: 5px; /* ajuste o raio conforme necessário */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/*menu link animation*/
+.underline__center--animation {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  padding-bottom: 4px;
+}
+.underline__center--animation:before {
+  background: #986DFF;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 51%;
+  position: absolute;
+  right: 51%;
+  transition-duration: 0.3s;
+  transition-property: left, right;
+  transition-timing-function: ease-out;
+  z-index: -1;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: left, right;
+  -webkit-transition-timing-function: ease-out;
+}
+
+.underline__center--animation:hover:before, .underline__center--animation:focus:before, .underline__center--animation:active:before {
+  left: 0;
+  right: 0;
 }

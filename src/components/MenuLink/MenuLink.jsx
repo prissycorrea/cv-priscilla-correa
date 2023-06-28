@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
 const MenuLinkStyles = styled.a`
-    text-decoration: none;
+    font-size: 1.2em;
 `
 
 export default function MenuLink({ children, href }) {
     return(
-        <MenuLinkStyles href={href}>
+        <MenuLinkStyles className="underline__center--animation" href={href}>
             {children}
         </MenuLinkStyles>
     )

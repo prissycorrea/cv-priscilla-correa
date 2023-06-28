@@ -2,10 +2,10 @@ import MenuLink from "../MenuLink/MenuLink";
 import styled from '@emotion/styled';
 
 const MenuLinksContainerStyles = styled.div`
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 35vw;
 `
 
 export default function MenuLinksContainer() {

@@ -3,8 +3,9 @@ import MenuLinks from "../MenuLinksContainer/MenuLinksContainer";
 import styled from '@emotion/styled';
 
 const NavbarContainer = styled.div`
-  background-color: red;
   display: flex;
+  height: 10vh;
+  justify-content: center;
   padding: 10px;
 `;
 

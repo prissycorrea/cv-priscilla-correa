@@ -1,14 +1,21 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
+import logoImage from "../../images/coding.gif";
 
 const LogoContainerStyles = styled.div`
-  background-color: green;
+  display: flex;
+  width: 150px;
+`;
+
+const LogoImage = styled.img`
+  height: auto;
+  width: 60%;
 `;
 
 export default function Logo() {
   return (
     <LogoContainerStyles>
-      <p>logotipo</p>
+      <LogoImage src={logoImage} alt="Logotipo" />
     </LogoContainerStyles>
   );
-};
+}
