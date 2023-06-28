@@ -1,13 +1,14 @@
 import React from 'react';
-import { css } from '@emotion/styled';
-import logoContainerStyles from './Logo.styles';
+import styled from '@emotion/styled';
 
-const Logo = () => {
+const LogoContainerStyles = styled.div`
+  background-color: green;
+`;
+
+export default function Logo() {
   return (
-    <div css={logoContainerStyles}>
+    <LogoContainerStyles>
       <p>logotipo</p>
-    </div>
+    </LogoContainerStyles>
   );
 };
-
-export default Logo;

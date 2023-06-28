@@ -1,16 +1,21 @@
 import MenuLink from "../MenuLink/MenuLink";
-import menuLinksContainerStyles from "./MenuLinksContainer.styles";
+import styled from '@emotion/styled';
 
-const MenuLinksContainer = () => {
+const MenuLinksContainerStyles = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+`
+
+export default function MenuLinksContainer() {
     return (
-        <div css={menuLinksContainerStyles}>
+        <MenuLinksContainerStyles>
             <MenuLink href="/home">Home</MenuLink>
             <MenuLink href="/about">About</MenuLink>
             <MenuLink href="/skills">Skills</MenuLink>
             <MenuLink href="/portfolio">Portfolio</MenuLink>
             <MenuLink href="/contact">Contact</MenuLink>
-        </div>
+        </MenuLinksContainerStyles>
     )
 }
-
-export default MenuLinksContainer;

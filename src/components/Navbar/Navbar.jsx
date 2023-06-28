@@ -1,16 +1,20 @@
-import navbar from "./Navbar.styles";
 import Logo from "../Logo/Logo";
 import MenuLinks from "../MenuLinksContainer/MenuLinksContainer";
+import styled from '@emotion/styled';
 
-const Navbar = () => {
+const NavbarContainer = styled.div`
+  background-color: red;
+  display: flex;
+  padding: 10px;
+`;
+
+export default function Navbar() {
   return (
     <>
-      <header css={navbar}>
+      <NavbarContainer>
         <Logo />
         <MenuLinks />
-      </header>
+      </NavbarContainer>
     </>
   );
 };
-
-export default Navbar;

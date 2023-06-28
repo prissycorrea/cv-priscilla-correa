@@ -1,11 +1,13 @@
-import menuLinkStyles from "./MenuLink.styles";
+import styled from '@emotion/styled';
 
-const MenuLink = ({ children, href }) => {
+const MenuLinkStyles = styled.a`
+    text-decoration: none;
+`
+
+export default function MenuLink({ children, href }) {
     return(
-        <a href={href} css={menuLinkStyles}>
+        <MenuLinkStyles href={href}>
             {children}
-        </a>
+        </MenuLinkStyles>
     )
 };
-
-export default MenuLink;
