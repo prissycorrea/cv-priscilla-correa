@@ -16,7 +16,7 @@
 }
 
 html {
-  overflow-y: scroll; /* Garante que a barra de rolagem esteja sempre presente */
+  overflow-y: scroll;
 }
 
 body {

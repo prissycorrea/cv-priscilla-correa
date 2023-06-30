@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 const MenuLinkStyles = styled.a`
     font-size: 1.2em;
+    font-weight: 400;
 `
 
 export default function MenuLink({ children, href }) {
