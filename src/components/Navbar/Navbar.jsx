@@ -1,4 +1,3 @@
-import Logo from "../Logo/Logo";
 import MenuLinks from "../MenuLinksContainer/MenuLinksContainer";
 import styled from '@emotion/styled';
 
@@ -13,7 +12,6 @@ export default function Navbar() {
   return (
     <>
       <NavbarContainer>
-        <Logo />
         <MenuLinks />
       </NavbarContainer>
     </>

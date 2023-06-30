@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 :root {
-  --hover-text-color: #986DFF;
-  --text-color: #999999;
-  --background-color: #111111;
-  --title-text-color: #ffffff;
-  --highlight-text-color: #986DFF;
+  --background-color: #212429;
   --default-font: 'Roboto', sans-serif;
+  --highlight-text-color: #986DFF;
+  --hover-text-color: #29def1;
+  --text-color: #999999;
+  --title-text-color: #ffffff;
+  --underline-link: #986DFF;
 }
 
 * {
   background-color: var(--background-color);
+  border: 0;
   color: var(--text-color);
   font-family: var(--default-font);
+  margin: 0;
+  outline: 0;
+  padding: 0;
 }
 
 html {
@@ -37,6 +42,14 @@ a:hover {
   color: var(--hover-text-color);
 }
 
+h1 {
+  color: var(--title-text-color);
+}
+
+.brackets {
+  color: var(--highlight-text-color);
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -59,14 +72,14 @@ a:hover {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   display: inline-block;
   overflow: hidden;
+  padding-bottom: 4px;
   position: relative;
   transform: perspective(1px) translateZ(0);
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
-  padding-bottom: 4px;
 }
 .underline__center--animation:before {
-  background: #986DFF;
+  background: var(--underline-link);
   bottom: 0;
   content: "";
   height: 2px;
