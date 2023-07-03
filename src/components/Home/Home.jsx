@@ -22,6 +22,7 @@ const HomeTitle = styled.h1`
 
 const HomeSubtitle = styled.h2`
     color: #29def1;
+    padding-bottom: 20px;
 `
 
 const TitleContainer = styled.div`

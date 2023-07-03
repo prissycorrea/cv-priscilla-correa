@@ -37,6 +37,7 @@ const AboutText = styled.p`
   font-size: 1.2em;
   margin-top: 10px;
   padding: 10px;
+  text-align: justify;
 `;
 
 export default function About() {
