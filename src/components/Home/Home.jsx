@@ -32,7 +32,7 @@ const TitleContainer = styled.div`
 export default function Home() {
     return(
         <HomeContainer>
-            <HomeImage src={programmingGirlImage01} alt="Foto de perfil" />
+            <HomeImage src={programmingGirlImage01} alt="Girl wearing headset with hands on keyboard and mouse" />
             <TitleContainer>
                 <HomeTitle>Priscilla Correa</HomeTitle>
                 <HomeSubtitle><span className="brackets">&lt;</span> Front End Developer <span className="brackets">/&gt;</span></HomeSubtitle>
