@@ -82,6 +82,12 @@ export default function Skills() {
         setSkillTitle(skillsInfo[skill].title);
         setSkillText(skillsInfo[skill].text);
     };
+
+    const handleMouseOut = () => {
+        setSkillTitle("Skills");
+        setSkillText("Passe o mouse sobre um ícone para obter mais informações.");
+    };
+
     return (
         <SkillsContainer>
             <SkillsTextsContainer>
@@ -89,16 +95,16 @@ export default function Skills() {
                 <SkillsText>{skillText}</SkillsText>
             </SkillsTextsContainer>
             <IconSkillContainer>
-                <IconSkill src={html5} onMouseOver={() => handleMouseOver("html5")} />
-                <IconSkill src={css3} onMouseOver={() => handleMouseOver("css3")} />
-                <IconSkill src={javascript} onMouseOver={() => handleMouseOver("javascript")} />
-                <IconSkill src={react} onMouseOver={() => handleMouseOver("react")} />
-                <IconSkill src={sapui5} onMouseOver={() => handleMouseOver("sapui5")} />
-                <IconSkill src={azure} onMouseOver={() => handleMouseOver("azure")} />
-                <IconSkill src={git} onMouseOver={() => handleMouseOver("git")} />
-                <IconSkill src={gitlab} onMouseOver={() => handleMouseOver("gitlab")} />
-                <IconSkill src={figma} onMouseOver={() => handleMouseOver("figma")} />
-                <IconSkill src={photoshop} onMouseOver={() => handleMouseOver("photoshop")} />
+                <IconSkill src={html5} onMouseOver={() => handleMouseOver("html5")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={css3} onMouseOver={() => handleMouseOver("css3")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={javascript} onMouseOver={() => handleMouseOver("javascript")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={react} onMouseOver={() => handleMouseOver("react")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={sapui5} onMouseOver={() => handleMouseOver("sapui5")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={azure} onMouseOver={() => handleMouseOver("azure")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={git} onMouseOver={() => handleMouseOver("git")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={gitlab} onMouseOver={() => handleMouseOver("gitlab")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={figma} onMouseOver={() => handleMouseOver("figma")}  onMouseOut={handleMouseOut} />
+                <IconSkill src={photoshop} onMouseOver={() => handleMouseOver("photoshop")}  onMouseOut={handleMouseOut} />
             </IconSkillContainer>
         </SkillsContainer>
     )
