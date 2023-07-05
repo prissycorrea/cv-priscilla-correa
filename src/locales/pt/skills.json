@@ -1,0 +1,46 @@
+{
+  "skills": {
+    "title": "Habilidades",
+    "description": "Passe o mouse sobre um ícone para obter mais informações.",
+    "html5": {
+      "title": "HTML 5",
+      "description": "rtgyhertgretwertert."
+    },
+    "css3": {
+      "title": "CSS 3",
+      "description": "HTMtr3etreretretreerte."
+    },
+    "javascript": {
+      "title": "JavaScript",
+      "description": "HTML terrwetertertertretertn Website."
+    },
+    "react": {
+      "title": "React",
+      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+    },
+    "sapui5": {
+      "title": "SAP UI5",
+      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+    },
+    "azure": {
+      "title": "Azure DevOps",
+      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+    },
+    "git": {
+      "title": "Git",
+      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+    },
+    "gitlab": {
+      "title": "Gitlab",
+      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+    },
+    "figma": {
+      "title": "Figma",
+      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+    },
+    "photoshop": {
+      "title": "Adobe Photoshop",
+      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+    }
+  }
+}

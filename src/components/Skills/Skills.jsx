@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
 import html5 from "../../images/skill-icons/html-5-svgrepo-com.svg"
 import css3 from "../../images/skill-icons/css-3-svgrepo-com.svg"
@@ -64,20 +65,23 @@ const IconSkill = styled.img`
 `
 
 export default function Skills() {
-    const [skillTitle, setSkillTitle] = useState("");
-    const [skillText, setSkillText] = useState("");
+    const { t } = useTranslation('skills');
+    const initialSkillTitle = t('skills.title');
+    const initialSkillText = t('skills.description');
+    const [skillTitle, setSkillTitle] = useState(initialSkillTitle);
+    const [skillText, setSkillText] = useState(initialSkillText);
 
     const skillsInfo = {
-        html5: { title: "HTML 5", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla risus vitae vestibulum sagittis. Fusce feugiat est eros, ac tincidunt mi euismod nec. Ut luctus luctus purus, id laoreet lorem pulvinar at." },
-        css3: { title: "CSS 3", text: "Curabitur non quam at risus ullamcorper gravida sed sit amet tortor. Nulla bibendum diam nec mauris aliquet, a bibendum arcu pretium. Vestibulum ultricies, massa in blandit luctus, lacus tortor semper lorem, eget interdum tortor arcu in nibh." },
-        javascript: { title: "JavaScript", text: "Sed congue auctor condimentum. Phasellus dapibus congue nisl, in congue tellus feugiat vitae. Cras commodo lacus orci, id convallis ante pellentesque in. Mauris dapibus neque sem, nec laoreet mauris dictum id." },
-        react: { title: "React", text: "Donec non purus pulvinar, interdum risus in, vestibulum magna. Aliquam erat volutpat. Maecenas tincidunt odio nec purus auctor, id luctus ante aliquet. Vestibulum fringilla neque eu metus feugiat, id iaculis diam consectetur." },
-        sapui5: {title: "SAP UI5", text: "Proin accumsan, elit eu congue venenatis, mi magna maximus magna, vitae convallis est justo at neque. Cras egestas risus sed lacus cursus, vitae condimentum ex dapibus. Quisque porttitor scelerisque blandit."},
-        azure: {title: "Azure DevOps", text: "Pellentesque sed odio at leo lobortis tincidunt at eget risus. Morbi nec dolor vulputate, aliquet neque id, luctus elit. Quisque lacinia elementum felis, at vestibulum magna bibendum sed."},
-        git: {title: "Git", text: "Fusce consectetur orci elit, nec semper ex ultrices vel. Etiam imperdiet sem et dui dapibus, eget congue justo cursus. Vestibulum a egestas velit, at consequat metus. Donec pellentesque justo lorem, a viverra justo ornare in."},
-        gitlab: {title: "Gitlab", text: "Aenean pellentesque, diam eget ullamcorper bibendum, leo lacus bibendum massa, eu pretium mauris diam id turpis. Quisque nec nisl pellentesque, lobortis nulla a, bibendum arcu. Morbi ac nisl ut odio dictum cursus."},
-        figma: {title: "Figma", text: "Integer vel ligula id dui luctus consectetur vitae eu lectus. Pellentesque venenatis augue nec diam aliquet, non porta justo gravida. Aliquam mollis mi a ex dapibus, et dapibus lacus sagittis."},
-        photoshop: {title: "Adobe Photoshop", text: "Ut sed nunc nec mi lacinia semper. Sed nec sem quis ipsum pharetra interdum. Curabitur a justo hendrerit, facilisis velit vitae, consectetur risus. Sed luctus tellus nec facilisis pellentesque."}
+        html5: { title: t('skills.html5.title'), text: t('skills.html5.description')},
+        css3: { title: t('skills.css3.title'), text: t('skills.css3.description') },
+        javascript: { title: t('skills.javascript.title'), text: t('skills.javascript.description')},
+        react: { title: t('skills.javascript.title'), text: t('skills.javascript.description') },
+        sapui5: {title: t('skills.sapui5.title'), text: t('skills.sapui5.description')},
+        azure: {title: t('skills.azure.title'), text: t('skills.azure.description')},
+        git: {title: t('skills.git.title'), text: t('skills.git.description')},
+        gitlab: {title: t('skills.gitlab.title'), text: t('skills.gitlab.description')},
+        figma: {title: t('skills.figma.title'), text: t('skills.figma.description')},
+        photoshop: {title: t('skills.photoshop.title'), text: t('skills.photoshop.description')}
     };
 
     const handleMouseOver = (skill) => {
@@ -86,10 +90,10 @@ export default function Skills() {
     };
 
     const handleMouseOut = () => {
-        setSkillTitle("Skills");
-        setSkillText("Passe o mouse sobre um ícone para obter mais informações.");
+        setSkillTitle(t('skills.title'));
+        setSkillText(t('skills.description'));
     };
-
+    
     return (
         <SkillsContainer>
             <SkillsTextsContainer>

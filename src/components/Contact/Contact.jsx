@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
 import linkedinIcon from "../../images/contact-icons/linkedin-round-svgrepo-com.svg"
 import githubIcon from "../../images/contact-icons/github-142-svgrepo-com.svg"
@@ -29,6 +30,7 @@ const IconContactContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     height: 20vh;
+    margin-top: 20px;
     width: 30vw;
 `
 
@@ -43,9 +45,10 @@ const IconContact = styled.img`
 `
 
 export default function Contact() {
+    const { t } = useTranslation('contact');
     return (
         <ContactContainer>
-            <ContactTitle>Contato</ContactTitle>
+            <ContactTitle><span>{t('contact.title')}</span></ContactTitle>
             <IconContactContainer>
                 <IconContact src={linkedinIcon} />
                 <IconContact src={githubIcon} />

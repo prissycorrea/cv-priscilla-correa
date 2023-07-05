@@ -1,5 +1,6 @@
-import MenuLinks from "../MenuLinksContainer/MenuLinksContainer";
 import styled from '@emotion/styled';
+import MenuLinks from "../MenuLinksContainer/MenuLinksContainer";
+import ToggleLanguegeButton from "../ToggleTranslateButton/ToggleTranslateButton";
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -13,6 +14,7 @@ export default function Navbar() {
     <>
       <NavbarContainer>
         <MenuLinks />
+        <ToggleLanguegeButton />
       </NavbarContainer>
     </>
   );

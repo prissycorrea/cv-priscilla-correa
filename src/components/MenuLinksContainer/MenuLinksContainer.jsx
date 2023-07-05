@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import MenuLink from "../MenuLink/MenuLink";
 import styled from '@emotion/styled';
 
@@ -9,13 +10,14 @@ const MenuLinksContainerStyles = styled.div`
 `
 
 export default function MenuLinksContainer() {
+    const { t } = useTranslation('menuLinks');
     return (
         <MenuLinksContainerStyles>
-            <MenuLink href="/home">Home</MenuLink>
-            <MenuLink href="/about">About</MenuLink>
-            <MenuLink href="/skills">Skills</MenuLink>
-            <MenuLink href="/portfolio">Portfolio</MenuLink>
-            <MenuLink href="/contact">Contact</MenuLink>
+            <MenuLink href="/home">{t('menuLinks.homeLink')}</MenuLink>
+            <MenuLink href="/about">{t('menuLinks.aboutLink')}</MenuLink>
+            <MenuLink href="/skills">{t('menuLinks.skillsLink')}</MenuLink>
+            <MenuLink href="/portfolio">{t('menuLinks.portfolioLink')}</MenuLink>
+            <MenuLink href="/contact">{t('menuLinks.contactLink')}</MenuLink>
         </MenuLinksContainerStyles>
     )
 }

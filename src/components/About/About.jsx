@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
 import programmingGirlImage02 from "../../images/programming_girl02.png";
 
@@ -41,26 +42,20 @@ const AboutText = styled.p`
 `;
 
 export default function About() {
+  const { t } = useTranslation('about');
+
   return (
     <AboutContainer>
       <AboutImage
         src={programmingGirlImage02}
-        alt="Girl wearing headset sitting in front of computer programming"
+        alt={t('about.whoAmI')}
       />
       <AboutTextsContainer>
         <AboutTitle>
-          <span>About Me</span>
+          <span>{t('about.whoAmI')}</span>
         </AboutTitle>
         <AboutText>
-          Cursando Análise e Desenvolvimento de Sistemas, meu foco está no
-          Desenvolvimento Front End. Tenho experiência com JavaScript e SAP UI5,
-          além de familiaridade com ferramentas e linguagens como React, Git /
-          Github, HTML / CSS, Adobe Photoshop, Figma e Bootstrap. Possuo
-          certificações em Azure Fundamentals, Azure Data Fundamentals e Azure
-          AI Fundamentals pela Microsoft, o que reflete meu compromisso com a
-          constante evolução e aprendizado. Com habilidades em inglês no nível
-          intermediário, estou preparada para enfrentar desafios e contribuir
-          para projetos inovadores no campo do Desenvolvimento Front End.
+          {t('about.description')}
         </AboutText>
       </AboutTextsContainer>
     </AboutContainer>

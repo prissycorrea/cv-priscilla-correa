@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
 
 const PortfolioContainer = styled.div`
@@ -64,18 +65,19 @@ const PortfolioLink = styled.a`
 `
 
 export default function Portfolio() {
+    const { t } = useTranslation('portfolio');
     return (
         <PortfolioContainer>
             <PortfolioTitle>
-                <span>Projetos</span>
+                <span>{t('portfolio.title')}</span>
             </PortfolioTitle>
             <PortfolioTextsContainer>
                 <PortfolioTextContainer>
-                    <PortfolioSubtitle>Em Breve</PortfolioSubtitle>
-                    <PortfolioText>...</PortfolioText>
+                    <PortfolioSubtitle>{t('portfolio.project01.title')}</PortfolioSubtitle>
+                    <PortfolioText>{t('portfolio.project01.description')}</PortfolioText>
                 </PortfolioTextContainer>
             </PortfolioTextsContainer>
-            <PortfolioLink>Mais projetos</PortfolioLink>
+            <PortfolioLink>{t('portfolio.description')}</PortfolioLink>
         </PortfolioContainer>
     )
 }

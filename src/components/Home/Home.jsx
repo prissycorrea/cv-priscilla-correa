@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
 import programmingGirlImage01 from "../../images/programming_girl01.png";
 
@@ -31,12 +32,13 @@ const TitleContainer = styled.div`
 `
 
 export default function Home() {
+    const { t } = useTranslation('home');
     return(
         <HomeContainer>
             <HomeImage src={programmingGirlImage01} alt="Girl wearing headset with hands on keyboard and mouse" />
             <TitleContainer>
                 <HomeTitle>Priscilla Correa</HomeTitle>
-                <HomeSubtitle><span className="brackets">&lt;</span> Front End Developer <span className="brackets">/&gt;</span></HomeSubtitle>
+                <HomeSubtitle><span className="brackets">&lt;</span> {t('home.subtitle')} <span className="brackets">/&gt;</span></HomeSubtitle>
             </TitleContainer>
         </HomeContainer>
     )
