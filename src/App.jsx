@@ -5,6 +5,7 @@ import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx"
 import Skills from "./components/Skills/Skills.jsx";
 import Portfolio from "./components/Portfolio/Portfolio.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 const GlobalStyles = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ const App = () => {
       <About />
       <Skills />
       <Portfolio />
+      <Contact />
     </GlobalStyles>
   );
 }
