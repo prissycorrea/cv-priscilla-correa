@@ -1,19 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "@emotion/styled";
 
 const PortfolioContainer = styled.div`
     align-items: center;
     display: flex;
+    flex-direction: column;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: center;
     width: 60vw;
 `
 
 const PortfolioTextsContainer = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
     padding: 20px;
+    width: 100%;
+`;
+
+const PortfolioTextContainer = styled.div`
+    align-items: center;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    margin: 10px;
+    padding: 20px;
+    transition: 0.5s;
     width: 30vw;
+    &:hover {
+        border: 2px solid #986DFF;
+        transition: 0.5s;
+    }
 `;
 
 const PortfolioTitle = styled.h3`
@@ -26,6 +44,13 @@ const PortfolioTitle = styled.h3`
     }
 `;
 
+const PortfolioSubtitle = styled.h3`
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: justify;
+`;
+
 const PortfolioText = styled.p`
     font-size: 1.2em;
     margin-top: 10px;
@@ -33,26 +58,24 @@ const PortfolioText = styled.p`
     text-align: justify;
 `;
 
-const IconPortfolioContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 20vh;
-    width: 30vw;
-`
-
-const IconPortfolio = styled.img`
-    opacity: 0.5;
-    padding: 15px;
-    width: 80px;
-    transition: 0.3s;
-    &:hover {
-        opacity: 1;
-    }
+const PortfolioLink = styled.a`
+    margin-top: 20px;
+    text-decoration: none;
 `
 
 export default function Portfolio() {
     return (
-        <></>
+        <PortfolioContainer>
+            <PortfolioTitle>
+                <span>Projetos</span>
+            </PortfolioTitle>
+            <PortfolioTextsContainer>
+                <PortfolioTextContainer>
+                    <PortfolioSubtitle>Em Breve</PortfolioSubtitle>
+                    <PortfolioText>...</PortfolioText>
+                </PortfolioTextContainer>
+            </PortfolioTextsContainer>
+            <PortfolioLink>Mais projetos</PortfolioLink>
+        </PortfolioContainer>
     )
 }

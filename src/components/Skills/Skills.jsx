@@ -22,6 +22,8 @@ const SkillsContainer = styled.div`
 const SkillsTextsContainer = styled.div`
     display: flex;
     flex-direction: column;
+    height: 20vh;
+    justify-content: flex-start;
     padding: 20px;
     width: 30vw;
 `;
