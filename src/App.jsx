@@ -17,40 +17,37 @@ import portfolioTranslationPT from "./locales/pt/portfolio.json";
 import skillsTranslationPT from "./locales/pt/skills.json";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Home from "./components/Home/Home.jsx";
-import About from "./components/About/About.jsx"
+import About from "./components/About/About.jsx";
 import Skills from "./components/Skills/Skills.jsx";
 import Portfolio from "./components/Portfolio/Portfolio.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources: {
-      en: {
-        about: aboutTranslationEN,
-        contact: contactTranslationEN,
-        home: homeTranslationEN,
-        menuLinks: menuLinksTranslationEN,
-        portfolio: portfolioTranslationEN,
-        skills: skillsTranslationEN
-      },
-      pt: {
-        about: aboutTranslationPT,
-        contact: contactTranslationPT,
-        home: homeTranslationPT,
-        menuLinks: menuLinksTranslationPT,
-        portfolio: portfolioTranslationPT,
-        skills: skillsTranslationPT
-      }
+i18n.use(initReactI18next).init({
+  resources: {
+    en: {
+      about: aboutTranslationEN,
+      contact: contactTranslationEN,
+      home: homeTranslationEN,
+      menuLinks: menuLinksTranslationEN,
+      portfolio: portfolioTranslationEN,
+      skills: skillsTranslationEN,
     },
-    lng: "pt",
-    fallbackLng: "pt",
-    interpolation: {
-      escapeValue: false
-    }
-  });
-
+    pt: {
+      about: aboutTranslationPT,
+      contact: contactTranslationPT,
+      home: homeTranslationPT,
+      menuLinks: menuLinksTranslationPT,
+      portfolio: portfolioTranslationPT,
+      skills: skillsTranslationPT,
+    },
+  },
+  lng: "pt",
+  fallbackLng: "pt",
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 const GlobalStyles = styled.div`
   display: flex;
@@ -60,7 +57,7 @@ const GlobalStyles = styled.div`
 `;
 
 const FullPageOptions = {
-  licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+  licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
   scrollingSpeed: 1000,
 };
 
@@ -68,23 +65,27 @@ const App = () => {
   return (
     <GlobalStyles>
       <Navbar />
-      <ReactFullpage
-        {...FullPageOptions}
-        render={({ state, fullpageApi }) => {
-          return (
-            <ReactFullpage.Wrapper>
-              <div className="section"><Home /></div>
-              <div className="section"><About /></div>
-              <div className="section"><Skills /></div>
-              <div className="section"><Portfolio /></div>
-              <div className="section"><Contact /></div>
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
+      <ReactFullpage.Wrapper>
+        <div id="home" className="section">
+          <Home />
+        </div>
+        <div id="about" className="section">
+          <About />
+        </div>
+        <div id="skills" className="section">
+          <Skills />
+        </div>
+        <div id="portfolio" className="section">
+          <Portfolio />
+        </div>
+        <div id="contact" className="section">
+          <Contact />
+        </div>
+      </ReactFullpage.Wrapper>
+
       <Footer />
     </GlobalStyles>
   );
-}
+};
 
 export default App;

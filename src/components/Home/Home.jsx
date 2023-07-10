@@ -8,12 +8,12 @@ const HomeContainer = styled.div`
     flex-direction: column;
     align-items: center;
     height: 80vh;
-    justify-content: space-around;
+    justify-content: center;
 `
 
 const HomeImage = styled.img`
     height: auto;
-    margin-top: 100px;
+    padding-top: 20%;
     width: 30vw;
 `
 
@@ -34,7 +34,7 @@ const TitleContainer = styled.div`
 export default function Home() {
     const { t } = useTranslation('home');
     return(
-        <HomeContainer>
+        <HomeContainer id="home">
             <HomeImage src={programmingGirlImage01} alt="Girl wearing headset with hands on keyboard and mouse" />
             <TitleContainer>
                 <HomeTitle>Priscilla Correa</HomeTitle>
