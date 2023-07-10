@@ -67,7 +67,7 @@ const PortfolioLink = styled.a`
 export default function Portfolio() {
     const { t } = useTranslation('portfolio');
     return (
-        <PortfolioContainer>
+        <PortfolioContainer id="portfolio">
             <PortfolioTitle>
                 <span>{t('portfolio.title')}</span>
             </PortfolioTitle>

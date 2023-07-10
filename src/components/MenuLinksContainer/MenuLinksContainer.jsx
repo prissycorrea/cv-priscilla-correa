@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import MenuLink from "../MenuLink/MenuLink";
 import styled from '@emotion/styled';
+import { Link } from 'react-scroll';
 
 const MenuLinksContainerStyles = styled.div`
     align-items: center;
@@ -13,11 +13,11 @@ export default function MenuLinksContainer() {
     const { t } = useTranslation('menuLinks');
     return (
         <MenuLinksContainerStyles>
-            <MenuLink href="/home">{t('menuLinks.homeLink')}</MenuLink>
-            <MenuLink href="/about">{t('menuLinks.aboutLink')}</MenuLink>
-            <MenuLink href="/skills">{t('menuLinks.skillsLink')}</MenuLink>
-            <MenuLink href="/portfolio">{t('menuLinks.portfolioLink')}</MenuLink>
-            <MenuLink href="/contact">{t('menuLinks.contactLink')}</MenuLink>
+            <Link to="home" smooth={true} duration={500}>{t('menuLinks.homeLink')}</Link>
+            <Link to="about" smooth={true} duration={500}>{t('menuLinks.aboutLink')}</Link>
+            <Link to="skills" smooth={true} duration={500}>{t('menuLinks.skillsLink')}</Link>
+            <Link to="portfolio" smooth={true} duration={500}>{t('menuLinks.portfolioLink')}</Link>
+            <Link to="contact" smooth={true} duration={500}>{t('menuLinks.contactLink')}</Link>
         </MenuLinksContainerStyles>
     )
 }

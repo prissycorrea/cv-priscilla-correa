@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import ReactFullpage from "@fullpage/react-fullpage";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import aboutTranslationEN from "./locales/en/about.json";
@@ -20,6 +21,7 @@ import About from "./components/About/About.jsx"
 import Skills from "./components/Skills/Skills.jsx";
 import Portfolio from "./components/Portfolio/Portfolio.jsx";
 import Contact from "./components/Contact/Contact.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 i18n
   .use(initReactI18next)
@@ -57,15 +59,30 @@ const GlobalStyles = styled.div`
   align-items: center;
 `;
 
+const FullPageOptions = {
+  licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+  scrollingSpeed: 1000,
+};
+
 const App = () => {
   return (
     <GlobalStyles>
       <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Portfolio />
-      <Contact />
+      <ReactFullpage
+        {...FullPageOptions}
+        render={({ state, fullpageApi }) => {
+          return (
+            <ReactFullpage.Wrapper>
+              <div className="section"><Home /></div>
+              <div className="section"><About /></div>
+              <div className="section"><Skills /></div>
+              <div className="section"><Portfolio /></div>
+              <div className="section"><Contact /></div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
+      <Footer />
     </GlobalStyles>
   );
 }

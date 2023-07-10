@@ -45,7 +45,7 @@ export default function About() {
   const { t } = useTranslation('about');
 
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <AboutImage
         src={programmingGirlImage02}
         alt={t('about.whoAmI')}

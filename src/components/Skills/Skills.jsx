@@ -95,7 +95,7 @@ export default function Skills() {
     };
     
     return (
-        <SkillsContainer>
+        <SkillsContainer id="skills">
             <SkillsTextsContainer>
                 <SkillsTitle><span>{skillTitle}</span></SkillsTitle>
                 <SkillsText>{skillText}</SkillsText>

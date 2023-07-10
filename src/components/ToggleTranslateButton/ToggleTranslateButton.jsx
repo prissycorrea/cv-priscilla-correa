@@ -1,38 +1,43 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
+import brazilFlag from '../../images/language-flags/brazil-flag.png';
+import ukFlag from '../../images/language-flags/uk-flag.png';
 
-const Switch = styled.label`
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-`;
+const SwitchContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
-const Slider = styled.span`
-  position: absolute;
+const Button = styled.button`
+  display: flex;
+  align-items: center;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 34px;
+  transition: background-color 0.3s ease;
+  width: 80px;
+  
+  &:hover {
+    background-color: #7e58c2;
+  }
 
-  &:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+  img {
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    transform: ${props => props.isEnglish ? 'translateX(26px)' : 'none'};
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 1em;
+    background-color: transparent;
+
+    &:hover {
+    color: #1C1C1C;
+  }
   }
 `;
 
@@ -47,8 +52,11 @@ export default function ToggleTranslateButton() {
     }
 
     return (
-        <Switch>
-            <Slider isEnglish={isEnglish} onClick={changeLanguage}></Slider>
-        </Switch>
+      <SwitchContainer>
+        <Button onClick={changeLanguage}>
+            <img src={isEnglish ? brazilFlag : ukFlag} alt="flag" />
+            <span>{isEnglish ? 'PT' : 'EN'}</span>
+        </Button>
+      </SwitchContainer>
     )
 }

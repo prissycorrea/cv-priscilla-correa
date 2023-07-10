@@ -30,8 +30,9 @@ const IconContactContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     height: 20vh;
+    justify-content: center;
     margin-top: 20px;
-    width: 30vw;
+    width: 100%;
 `
 
 const IconContact = styled.img` 
@@ -47,7 +48,7 @@ const IconContact = styled.img`
 export default function Contact() {
     const { t } = useTranslation('contact');
     return (
-        <ContactContainer>
+        <ContactContainer id="contact">
             <ContactTitle><span>{t('contact.title')}</span></ContactTitle>
             <IconContactContainer>
                 <IconContact src={linkedinIcon} />
