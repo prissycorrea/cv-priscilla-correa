@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
 import programmingGirlImage01 from "../../images/programming_girl01.png";
+import { devices } from "../../utils/devicesSizes";
 
 const HomeContainer = styled.div`
     display: flex;
@@ -15,15 +16,25 @@ const HomeImage = styled.img`
     height: auto;
     margin-top: 100px;
     width: 30vw;
+    @media ${devices.mobile} {
+    flex-direction: row;
+    width: 100vw;
+    }
 `
 
 const HomeTitle = styled.h1`
     font-size: 3em;
+    @media ${devices.mobile} {
+    font-size: 1.4em;
+    }
 `
 
 const HomeSubtitle = styled.h2`
     color: #29def1;
     padding-bottom: 20px;
+    @media ${devices.mobile} {
+    font-size: 1.4em;
+    }
 `
 
 const TitleContainer = styled.div`

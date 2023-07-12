@@ -2,6 +2,7 @@
   "skills": {
     "title": "Habilidades",
     "description": "Passe o mouse sobre um ícone para obter mais informações.",
+    "description-mobile": "Clique em um ícone para obter mais informações",
     "html5": {
       "title": "HTML 5",
       "description": "HTML, que significa HyperText Markup Language (Linguagem de Marcação de Hipertexto), é a linguagem padrão para criar páginas e aplicativos web. É uma linguagem de marcação, o que significa que ela estrutura o conteúdo na web, definindo, por exemplo, parágrafos, cabeçalhos, imagens ou vídeos em um site."

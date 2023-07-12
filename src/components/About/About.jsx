@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
 import programmingGirlImage02 from "../../images/programming_girl02.png";
+import { devices } from "../../utils/devicesSizes";
 
 const AboutContainer = styled.div`
   align-items: center;
@@ -10,12 +11,19 @@ const AboutContainer = styled.div`
   justify-content: center;
   margin: 0 auto;
   width: 60vw;
+  @media ${devices.mobile} {
+    flex-direction: column;
+    width: 95vw;
+  }
 `;
 
 const AboutImage = styled.img`
   border: 3px solid rgba(255, 255, 255, 0.08);
   height: 55%;
   width: 55%;
+  @media ${devices.mobile} {
+    display: none;
+  }
 `;
 
 const AboutTextsContainer = styled.div`

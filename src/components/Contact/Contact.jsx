@@ -32,7 +32,7 @@ const IconContactContainer = styled.div`
     flex-wrap: wrap;
     height: 20vh;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
 `
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
+import { devices } from "../../utils/devicesSizes";
 
 const PortfolioContainer = styled.div`
     align-items: center;
@@ -34,6 +35,10 @@ const PortfolioTextContainer = styled.div`
         border: 2px solid #986DFF;
         transition: 0.5s;
     }
+    @media ${devices.mobile} {
+        height: 30vh;
+        width: 100vw;
+    }
 `;
 
 const PortfolioTitle = styled.h3`
@@ -58,6 +63,9 @@ const PortfolioText = styled.p`
     margin-top: 10px;
     padding: 10px;
     text-align: justify;
+    @media ${devices.mobile} {
+    font-size: 1em;
+  }
 `;
 
 const PortfolioLink = styled.a`

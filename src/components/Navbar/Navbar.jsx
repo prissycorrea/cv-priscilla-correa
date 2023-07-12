@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import ToggleLanguegeButton from "../ToggleTranslateButton/ToggleTranslateButton";
-import MenuLinks from "../MenuLinksContainer/MenuLinksContainer"
+import MenuLinks from "../MenuLinksContainer/MenuLinksContainer";
+import { devices } from "../../utils/devicesSizes"
 
 const NavbarContainer = styled.div`
   align-items: center;
@@ -12,6 +13,9 @@ const NavbarContainer = styled.div`
   padding: 10px;
   top: 0;
   width: 55vw;
+  @media ${devices.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const NavbarMenuContainer = styled.div`

@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
-import html5 from "../../images/skill-icons/html-5-svgrepo-com.svg"
-import css3 from "../../images/skill-icons/css-3-svgrepo-com.svg"
-import javascript from "../../images/skill-icons/javascript-svgrepo-com.svg"
-import figma from "../../images/skill-icons/figma-svgrepo-com.svg"
-import git from "../../images/skill-icons/git-svgrepo-com.svg"
-import gitlab from "../../images/skill-icons/gitlab-svgrepo-com.svg"
-import react from "../../images/skill-icons/react-svgrepo-com.svg"
-import sapui5 from "../../images/skill-icons/SAPUI5_orange_vertical.png"
-import azure from "../../images/skill-icons/azure-devops-svgrepo-com.svg"
-import photoshop from "../../images/skill-icons/photoshop-svgrepo-com.svg"
+import html5 from "../../images/skill-icons/html-5-svgrepo-com.svg";
+import css3 from "../../images/skill-icons/css-3-svgrepo-com.svg";
+import javascript from "../../images/skill-icons/javascript-svgrepo-com.svg";
+import figma from "../../images/skill-icons/figma-svgrepo-com.svg";
+import git from "../../images/skill-icons/git-svgrepo-com.svg";
+import gitlab from "../../images/skill-icons/gitlab-svgrepo-com.svg";
+import react from "../../images/skill-icons/react-svgrepo-com.svg";
+import sapui5 from "../../images/skill-icons/SAPUI5_orange_vertical.png";
+import azure from "../../images/skill-icons/azure-devops-svgrepo-com.svg";
+import photoshop from "../../images/skill-icons/photoshop-svgrepo-com.svg";
+import { devices } from "../../utils/devicesSizes";
 
 const SkillsContainer = styled.div`
     align-items: center;
@@ -19,15 +20,25 @@ const SkillsContainer = styled.div`
     justify-content: space-between;
     margin: auto;
     width: 60vw;
+    @media ${devices.mobile} {
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        width: 95vw;
+  }
 `
 
 const SkillsTextsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    height: 20vh;
+    height: 40vh;
     justify-content: flex-start;
     padding: 20px;
     width: 30vw;
+    @media ${devices.mobile} {
+        width: 92vw;
+    }
 `;
 
 const SkillsTitle = styled.h3`
@@ -45,6 +56,9 @@ const SkillsText = styled.p`
     margin-top: 10px;
     padding: 10px;
     text-align: justify;
+    @media ${devices.mobile} {
+        font-size: 1em;
+    }
 `;
 
 const IconSkillContainer = styled.div`
@@ -53,6 +67,9 @@ const IconSkillContainer = styled.div`
     flex-wrap: wrap;
     height: 20vh;
     width: 30vw;
+    @media ${devices.mobile} {
+        width: 92vw;
+    }
 `
 
 const IconSkill = styled.img`
@@ -62,6 +79,9 @@ const IconSkill = styled.img`
     transition: 0.3s;
     &:hover {
         opacity: 1;
+    }
+    @media ${devices.mobile} {
+        width: 45px;
     }
 `
 

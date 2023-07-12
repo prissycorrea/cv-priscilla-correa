@@ -2,6 +2,7 @@
     "skills": {
     "title": "Skills",
     "description": "Hover over an icon to get more information.",
+    "description-mobile": "Click on an icon to get more information.",
     "html5": {
       "title": "HTML 5",
       "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
