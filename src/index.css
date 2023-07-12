@@ -68,7 +68,7 @@ h1 {
 }
 
 /*menu link animation*/
-.underline__center--animation {
+.underline-center-animation {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   display: inline-block;
   overflow: hidden;
@@ -78,7 +78,7 @@ h1 {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
 }
-.underline__center--animation:before {
+.underline-center-animation:before {
   background: var(--underline-link);
   bottom: 0;
   content: "";
@@ -95,7 +95,7 @@ h1 {
   -webkit-transition-timing-function: ease-out;
 }
 
-.underline__center--animation:hover:before, .underline__center--animation:focus:before, .underline__center--animation:active:before {
+.underline-center-animation:hover:before, .underline-center-animation:focus:before, .underline-center-animation:active:before {
   left: 0;
   right: 0;
 }

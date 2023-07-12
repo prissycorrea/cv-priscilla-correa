@@ -1,23 +1,12 @@
-import styled from '@emotion/styled';
-import { Link } from 'react-scroll';
+import React from 'react';
+import ScrollIntoView from 'react-scroll-into-view-if-needed';
 
-const MenuLinkStyles = styled(Link)`
-    font-size: 1.2em;
-    font-weight: 400;
-`;
+const MenuLink = ({ children, to }) => {
+  return (
+    <ScrollIntoView className="menu-link-style underline-center-animation" selector={`#${to}`}>
+      <a href={`#${to}`}>{children}</a>
+    </ScrollIntoView>
+  );
+};
 
-export default function MenuLink({ children, to, smooth, duration }) {
-    return(
-        <MenuLinkStyles 
-            to={to}
-            smooth={smooth}
-            duration={duration}
-            spy={true}
-            exact='true'
-            offset={-70}
-            className="underline__center--animation"
-        >
-            {children}
-        </MenuLinkStyles>
-    );
-}
+export default MenuLink;

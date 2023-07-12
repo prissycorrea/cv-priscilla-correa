@@ -12,6 +12,7 @@ const ContactContainer = styled.div`
     flex-direction: column;
     height: 100vh;
     justify-content: center;
+    margin: auto;
     width: 60vw;
 `
 
@@ -51,10 +52,18 @@ export default function Contact() {
         <ContactContainer id="contact">
             <ContactTitle><span>{t('contact.title')}</span></ContactTitle>
             <IconContactContainer>
-                <IconContact src={linkedinIcon} />
-                <IconContact src={githubIcon} />
-                <IconContact src={emailIcon} />
-                <IconContact src={behanceIcon} />
+                <a href="https://www.linkedin.com/in/priscilla-correa" target="_blank" rel="noreferrer">
+                    <IconContact src={linkedinIcon} />
+                </a>
+                <a href="https://github.com/prissycorrea" target="_blank" rel="noreferrer">
+                    <IconContact src={githubIcon} />
+                </a>
+                <a href="mailto:priscillacdelfino@gmail.com" target="_blank" rel="noreferrer">
+                    <IconContact src={emailIcon} />
+                </a>
+                <a href="https://www.behance.net/prissycorrea" target="_blank" rel="noreferrer">
+                    <IconContact src={behanceIcon} />
+                </a>
             </IconContactContainer>
         </ContactContainer>
     )

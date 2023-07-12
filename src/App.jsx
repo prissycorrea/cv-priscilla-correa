@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
-import ReactFullpage from "@fullpage/react-fullpage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import aboutTranslationEN from "./locales/en/about.json";
@@ -49,43 +48,18 @@ i18n.use(initReactI18next).init({
   },
 });
 
-const GlobalStyles = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const FullPageOptions = {
-  licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
-  scrollingSpeed: 1000,
-};
-
-const App = () => {
+export default function App() {
   return (
-    <GlobalStyles>
+    <Router>
       <Navbar />
-      <ReactFullpage.Wrapper>
-        <div id="home" className="section">
-          <Home />
-        </div>
-        <div id="about" className="section">
-          <About />
-        </div>
-        <div id="skills" className="section">
-          <Skills />
-        </div>
-        <div id="portfolio" className="section">
-          <Portfolio />
-        </div>
-        <div id="contact" className="section">
-          <Contact />
-        </div>
-      </ReactFullpage.Wrapper>
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </GlobalStyles>
+    </Router>
   );
-};
-
-export default App;
+}

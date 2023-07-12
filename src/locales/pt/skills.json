@@ -4,43 +4,43 @@
     "description": "Passe o mouse sobre um ícone para obter mais informações.",
     "html5": {
       "title": "HTML 5",
-      "description": "rtgyhertgretwertert."
+      "description": "HTML, que significa HyperText Markup Language (Linguagem de Marcação de Hipertexto), é a linguagem padrão para criar páginas e aplicativos web. É uma linguagem de marcação, o que significa que ela estrutura o conteúdo na web, definindo, por exemplo, parágrafos, cabeçalhos, imagens ou vídeos em um site."
     },
     "css3": {
       "title": "CSS 3",
-      "description": "HTMtr3etreretretreerte."
+      "description": "CSS, que significa Cascading Style Sheets (Folhas de Estilo em Cascata), é uma linguagem de estilo usada para descrever a aparência e a formatação de um documento escrito em HTML. CSS é responsável por controlar o layout de várias páginas de uma só vez, incluindo aspectos de design como o esquema de cores, tamanhos de fonte, espaçamento, layout de colunas e muito mais."
     },
     "javascript": {
       "title": "JavaScript",
-      "description": "HTML terrwetertertertretertn Website."
+      "description": "Linguagem de programação usada principalmente para adicionar interatividade às páginas da web no lado do cliente, embora também seja usada no back-end com Node.js."
     },
     "react": {
       "title": "React",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": " Biblioteca JavaScript para a criação de interfaces de usuário em páginas web, conhecida por sua eficiência e flexibilidade. Utiliza um modelo de componentes reutilizáveis."
     },
     "sapui5": {
       "title": "SAP UI5",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Conjunto de bibliotecas JavaScript desenvolvido pela SAP para a criação de aplicações web empresariais ricas e responsivas."
     },
     "azure": {
       "title": "Azure DevOps",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Conjunto de ferramentas de desenvolvimento de software da Microsoft que facilita a integração contínua/entrega contínua (CI/CD), o gerenciamento de projetos, o controle de versão de código e outros aspectos do processo de desenvolvimento de software."
     },
     "git": {
       "title": "Git",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Sistema de controle de versão distribuído que permite a vários desenvolvedores trabalharem em um projeto simultaneamente sem conflitos de código."
     },
     "gitlab": {
       "title": "Gitlab",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Plataforma de gerenciamento de repositório Git que fornece um conjunto de ferramentas para o ciclo de vida de desenvolvimento de software, incluindo gerenciamento de código, rastreamento de problemas, integração contínua/entrega contínua e muito mais."
     },
     "figma": {
       "title": "Figma",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Ferramenta de design baseada na nuvem que permite a colaboração em tempo real. É usada para criar wireframes, protótipos e outros materiais de design."
     },
     "photoshop": {
       "title": "Adobe Photoshop",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Programa de edição de imagens desenvolvido pela Adobe, amplamente utilizado por designers gráficos e fotógrafos para criar e modificar imagens digitais."
     }
   }
 }

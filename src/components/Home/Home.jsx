@@ -7,13 +7,13 @@ const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
     justify-content: center;
 `
 
 const HomeImage = styled.img`
     height: auto;
-    padding-top: 20%;
+    margin-top: 100px;
     width: 30vw;
 `
 

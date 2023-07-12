@@ -1,23 +1,30 @@
+import { Link } from "react-router-dom";
+import styled from "@emotion/styled";
 import { useTranslation } from 'react-i18next';
-import styled from '@emotion/styled';
-import MenuLink from '../MenuLink/MenuLink';
 
-const MenuLinksContainerStyles = styled.div`
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    width: 35vw;
-`
+const MenuLinksContainer = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 35vw;
+`;
 
-export default function MenuLinksContainer() {
-    const { t } = useTranslation('menuLinks');
-    return (
-        <MenuLinksContainerStyles>
-            <MenuLink to="home" smooth={true} duration={500}>{t('menuLinks.homeLink')}</MenuLink>
-            <MenuLink to="about" smooth={true} duration={500}>{t('menuLinks.aboutLink')}</MenuLink>
-            <MenuLink to="skills" smooth={true} duration={500}>{t('menuLinks.skillsLink')}</MenuLink>
-            <MenuLink to="portfolio" smooth={true} duration={500}>{t('menuLinks.portfolioLink')}</MenuLink>
-            <MenuLink to="contact" smooth={true} duration={500}>{t('menuLinks.contactLink')}</MenuLink>
-        </MenuLinksContainerStyles>
-    )
-}
+const StyledLink = styled(Link)`
+  font-size: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
+`;
+
+export default function MenuLinks() {
+  const { t } = useTranslation('menuLinks');
+
+  return (
+    <MenuLinksContainer>
+      <StyledLink to="/">{t('menuLinks.homeLink')}</StyledLink>
+      <StyledLink to="/about">{t('menuLinks.aboutLink')}</StyledLink>
+      <StyledLink to="/skills">{t('menuLinks.skillsLink')}</StyledLink>
+      <StyledLink to="/portfolio">{t('menuLinks.portfolioLink')}</StyledLink>
+      <StyledLink to="/contact">{t('menuLinks.contactLink')}</StyledLink>
+    </MenuLinksContainer>
+  );
+};

@@ -8,6 +8,7 @@ const PortfolioContainer = styled.div`
     flex-direction: column;
     height: 100vh;
     justify-content: center;
+    margin: auto;
     width: 60vw;
 `
 
