@@ -9,7 +9,7 @@ const MenuLinksContainer = styled.div`
   justify-content: space-between;
   width: 35vw;
   @media ${devices.mobile} {
-    margin-top: 30%;
+    padding-top: 30%;
     flex-wrap: wrap;
     width: 90vw;
     }
@@ -22,9 +22,6 @@ const StyledLink = styled(Link)`
   @media ${devices.mobile} {
     font-size: 1em;
     margin-bottom: 30px;
-  }
-  @media ${devices.tablet} {
-    font-size: 1.2em;
   }
 `;
 

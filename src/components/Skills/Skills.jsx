@@ -69,6 +69,7 @@ const IconSkillContainer = styled.div`
   height: 20vh;
   width: 30vw;
   @media ${devices.mobile} {
+    justify-content: center;
     width: 92vw;
   }
 `;
@@ -82,7 +83,7 @@ const IconSkill = styled.img`
     opacity: 1;
   }
   @media ${devices.mobile} {
-    width: 45px;
+    width: 80px;
   }
 `;
 

@@ -20,6 +20,9 @@ const HomeImage = styled.img`
     flex-direction: row;
     width: 100vw;
     }
+    @media ${devices.tablet} {
+        width: 70vw;
+    }
 `
 
 const HomeTitle = styled.h1`

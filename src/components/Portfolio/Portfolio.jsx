@@ -63,7 +63,7 @@ const PortfolioTitle = styled.h3`
         padding: 5px 10px;
     }
     @media ${devices.mobile} {
-        margin-top: 150px;
+        margin-top: 180px;
     }
 `;
 
