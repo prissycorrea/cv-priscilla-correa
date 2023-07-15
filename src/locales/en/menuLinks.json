@@ -1,0 +1,9 @@
+{
+    "menuLinks": {
+        "homeLink": "Home",
+        "aboutLink": "About",
+        "skillsLink": "Skills",
+        "portfolioLink": "Portfolio",
+        "contactLink": "Contact"
+      }
+}

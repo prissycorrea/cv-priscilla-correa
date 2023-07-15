@@ -1,0 +1,9 @@
+{
+    "menuLinks": {
+        "homeLink": "Início",
+        "aboutLink": "Sobre",
+        "skillsLink": "Habilidades",
+        "portfolioLink": "Portfólio",
+        "contactLink": "Contato"
+      }
+}

@@ -1,0 +1,25 @@
+{
+  "portfolio": {
+      "title": "Portfolio",
+      "description": "View more",
+      "github-url": "https://github.com/prissycorrea",
+        "project01": {
+          "title": "Study Tracker",
+          "description": "Powered by Vue and Bulma, Study Tracker is a web application for time-stamping study assignments.",
+          "live": "https://studytracker-8g68g4b0r-prissycorrea.vercel.app/",
+          "git-repo": "https://github.com/prissycorrea/studytracker"
+        },
+        "project02": {
+          "title": "Digital Curriculum Vitae",
+          "description": "Created in JS Vanilla, the Digital Curriculum Vitae is a web page developed as a solution for a client who needed to make his professional data available in a practical and visually attractive way.",
+          "live": "https://prissycorrea.github.io/daniloreis-cv",
+          "git-repo": "https://github.com/prissycorrea/daniloreis-cv"
+        },
+        "project03": {
+          "title": "CliNutri",
+          "description": "Developed in JS Vanilla as a solution for a client who needed to register and calculate the BMI of their patients in a nutrition clinic.",
+          "live": "https://prissycorrea.github.io/clinutri/",
+          "git-repo": "https://github.com/prissycorrea/clinutri/"
+        }
+    }
+}
