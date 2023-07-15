@@ -18,10 +18,7 @@ const HomeImage = styled.img`
     width: 30vw;
     @media ${devices.mobile} {
     flex-direction: row;
-    width: 100vw;
-    }
-    @media ${devices.tablet} {
-        width: 70vw;
+    width: 90vw;
     }
 `
 
