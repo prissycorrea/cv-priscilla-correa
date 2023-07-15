@@ -13,6 +13,7 @@
 * {
   background-color: var(--background-color);
   border: 0;
+  box-sizing: border-box;
   color: var(--text-color);
   font-family: var(--default-font);
   margin: 0;

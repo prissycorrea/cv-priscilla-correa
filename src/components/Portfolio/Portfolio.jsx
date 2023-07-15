@@ -2,23 +2,35 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import styled from "@emotion/styled";
 import { devices } from "../../utils/devicesSizes";
+import livePreview from "../../images/portfolio-icons/webpage-img-txt-svgrepo-com.svg";
+import githubRepo from "../../images/portfolio-icons/code-programming-svgrepo-com.svg";
 
 const PortfolioContainer = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     margin: auto;
-    width: 60vw;
+    width: 80vw;
+    @media ${devices.mobile} {
+        margin: 0 auto;
+    }
 `
 
 const PortfolioTextsContainer = styled.div`
     display: flex;
+    gap: 90px;
+    min-height: 50vh;
     justify-content: center;
     margin-top: 20px;
     padding: 20px;
-    width: 100%;
+    width: 95%;
+    @media ${devices.mobile} {
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+    }
 `;
 
 const PortfolioTextContainer = styled.div`
@@ -26,7 +38,6 @@ const PortfolioTextContainer = styled.div`
     border: 2px solid transparent;
     display: flex;
     flex-direction: column;
-    height: 15vh;
     margin: 10px;
     padding: 20px;
     transition: 0.5s;
@@ -36,8 +47,10 @@ const PortfolioTextContainer = styled.div`
         transition: 0.5s;
     }
     @media ${devices.mobile} {
-        height: 30vh;
-        width: 100vw;
+        border: 2px solid #986DFF;
+        margin: 0px;
+        padding: 5px;
+        width: 80vw;
     }
 `;
 
@@ -49,17 +62,20 @@ const PortfolioTitle = styled.h3`
         font-size: 1.4em;
         padding: 5px 10px;
     }
+    @media ${devices.mobile} {
+        margin-top: 150px;
+    }
 `;
 
 const PortfolioSubtitle = styled.h3`
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 10px;
     padding: 10px;
     text-align: justify;
 `;
 
 const PortfolioText = styled.p`
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 10px;
     padding: 10px;
     text-align: justify;
@@ -70,7 +86,39 @@ const PortfolioText = styled.p`
 
 const PortfolioLink = styled.a`
     margin-top: 20px;
-    text-decoration: none;
+    text-decoration: underline;
+`
+
+const PortfolioIconContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+`;
+
+const IconPortfolio = styled.img`
+    height: 70px;
+    opacity: 0.5;
+    padding: 15px;
+    transition: 0.3s;
+    &:hover {
+        opacity: 1;
+    }
+    @media ${devices.mobile} {
+        height: 60px;
+    }
+`
+
+const PortfolioLinkSeeMore = styled.a`
+    border: 1px solid #986DFF;
+    color:#29def1;
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 10px;
+    @media ${devices.mobile} {
+        margin-bottom: 100px;
+    }
 `
 
 export default function Portfolio() {
@@ -84,9 +132,29 @@ export default function Portfolio() {
                 <PortfolioTextContainer>
                     <PortfolioSubtitle>{t('portfolio.project01.title')}</PortfolioSubtitle>
                     <PortfolioText>{t('portfolio.project01.description')}</PortfolioText>
+                    <PortfolioIconContainer>
+                        <PortfolioLink href={t('portfolio.project01.live')}  target="_blank" rel="noopener noreferrer"><IconPortfolio src={livePreview} /></PortfolioLink>
+                        <PortfolioLink href={t('portfolio.project01.git-repo')}  target="_blank" rel="noopener noreferrer"><IconPortfolio src={githubRepo} /></PortfolioLink>
+                    </PortfolioIconContainer>
+                </PortfolioTextContainer>
+                <PortfolioTextContainer>
+                    <PortfolioSubtitle>{t('portfolio.project02.title')}</PortfolioSubtitle>
+                    <PortfolioText>{t('portfolio.project02.description')}</PortfolioText>
+                    <PortfolioIconContainer>
+                        <PortfolioLink href={t('portfolio.project02.live')}  target="_blank" rel="noopener noreferrer"><IconPortfolio src={livePreview} /></PortfolioLink>
+                        <PortfolioLink href={t('portfolio.project02.git-repo')}  target="_blank" rel="noopener noreferrer"><IconPortfolio src={githubRepo} /></PortfolioLink>
+                    </PortfolioIconContainer>
+                </PortfolioTextContainer>
+                <PortfolioTextContainer>
+                    <PortfolioSubtitle>{t('portfolio.project01.title')}</PortfolioSubtitle>
+                    <PortfolioText>{t('portfolio.project01.description')}</PortfolioText>
+                    <PortfolioIconContainer>
+                        <PortfolioLink href={t('portfolio.project01.live')}  target="_blank" rel="noopener noreferrer"><IconPortfolio src={livePreview} /></PortfolioLink>
+                        <PortfolioLink href={t('portfolio.project01.git-repo')}  target="_blank" rel="noopener noreferrer"><IconPortfolio src={githubRepo} /></PortfolioLink>
+                    </PortfolioIconContainer>
                 </PortfolioTextContainer>
             </PortfolioTextsContainer>
-            <PortfolioLink>{t('portfolio.description')}</PortfolioLink>
+            <PortfolioLinkSeeMore href={t('portfolio.github-url')} target="_blank" rel="noopener noreferrer">{t('portfolio.description')}</PortfolioLinkSeeMore>
         </PortfolioContainer>
     )
 }

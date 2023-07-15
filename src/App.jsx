@@ -20,7 +20,6 @@ import About from "./components/About/About.jsx";
 import Skills from "./components/Skills/Skills.jsx";
 import Portfolio from "./components/Portfolio/Portfolio.jsx";
 import Contact from "./components/Contact/Contact.jsx";
-import Footer from "./components/Footer/Footer.jsx";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -59,7 +58,6 @@ export default function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }
