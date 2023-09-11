@@ -1,47 +1,47 @@
 {
-    "skills": {
+  "skills": {
     "title": "Skills",
     "description": "Hover over an icon to get more information.",
-    "description-mobile": "Click on an icon to get more information.",
+    "description-mobile": "Click on an icon to get more information",
     "html5": {
       "title": "HTML 5",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "HTML, which stands for HyperText Markup Language, is the standard language for creating web pages and web applications. It is a markup language, meaning it structures the content on the web, defining, for instance, paragraphs, headings, images, or videos on a website."
     },
     "css3": {
       "title": "CSS 3",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "CSS, which stands for Cascading Style Sheets, is a style language used to describe the appearance and formatting of a document written in HTML. CSS is responsible for controlling the layout of multiple pages at once, including design aspects such as the color scheme, font sizes, spacing, column layout, and more."
     },
     "javascript": {
       "title": "JavaScript",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Programming language primarily used to add interactivity to web pages on the client side, although it is also used on the back-end with Node.js."
     },
     "react": {
       "title": "React",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "JavaScript library for creating user interfaces on web pages, known for its efficiency and flexibility. Utilizes a model of reusable components."
     },
     "sapui5": {
       "title": "SAP UI5",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Set of JavaScript libraries developed by SAP for creating rich and responsive enterprise web applications."
     },
     "azure": {
       "title": "Azure DevOps",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Microsoft's software development toolset that facilitates continuous integration/continuous delivery (CI/CD), project management, code version control, and other aspects of the software development process."
     },
     "git": {
       "title": "Git",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Distributed version control system that allows multiple developers to work on a project simultaneously without code conflicts."
     },
     "gitlab": {
       "title": "Gitlab",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Git repository management platform that provides a set of tools for the software development lifecycle, including code management, issue tracking, continuous integration/continuous delivery, and more."
     },
     "figma": {
       "title": "Figma",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Cloud-based design tool that allows for real-time collaboration. It is used to create wireframes, prototypes, and other design materials."
     },
     "photoshop": {
       "title": "Adobe Photoshop",
-      "description": "HTML is the standard markup language for Web pages. With HTML you can create your own Website."
+      "description": "Image editing program developed by Adobe, widely used by graphic designers and photographers to create and modify digital images."
     }
   }
 }
