@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import { useTranslation } from 'react-i18next';
@@ -30,11 +31,11 @@ export default function MenuLinks() {
 
   return (
     <MenuLinksContainer>
-      <StyledLink to="/">{t('menuLinks.homeLink')}</StyledLink>
-      <StyledLink to="/about">{t('menuLinks.aboutLink')}</StyledLink>
-      <StyledLink to="/skills">{t('menuLinks.skillsLink')}</StyledLink>
-      <StyledLink to="/portfolio">{t('menuLinks.portfolioLink')}</StyledLink>
-      <StyledLink to="/contact">{t('menuLinks.contactLink')}</StyledLink>
+      <StyledLink to="/" data-testid="home-link">{t('menuLinks.homeLink')}</StyledLink>
+      <StyledLink to="/about" data-testid="about-link">{t('menuLinks.aboutLink')}</StyledLink>
+      <StyledLink to="/skills" data-testid="skills-link">{t('menuLinks.skillsLink')}</StyledLink>
+      <StyledLink to="/portfolio" data-testid="portfolio-link">{t('menuLinks.portfolioLink')}</StyledLink>
+      <StyledLink to="/contact" data-testid="contact-link">{t('menuLinks.contactLink')}</StyledLink>
     </MenuLinksContainer>
   );
 };
