@@ -1,23 +1,28 @@
 {
     "pt-br": {
         "nav": {
-            "logo": "Portfolio",
+            "logo": "",
             "menu": {
                 "home": "Início",
                 "about": "Sobre",
                 "skills": "Habilidades",
                 "projects": "Projetos",
-                "certifications": "Certificações",
+                "certifications": "Formação e Certificações",
                 "contact": "Contato"
             }
         },
+        "languageToggle": {
+            "pt": "PT",
+            "en": "EN"
+        },
         "hero": {
-            "name": "Seu Nome",
-            "title": "Desenvolvedor Full Stack",
-            "description": "Olá! Sou um desenvolvedor apaixonado por criar soluções inovadoras e experiências digitais excepcionais. Com experiência em desenvolvimento web e mobile, busco sempre aprender novas tecnologias e aprimorar minhas habilidades.",
+            "name": "Priscilla Correa",
+            "title": "Desenvolvedora",
+            "description": "Olá! Sou uma desenvolvedora apaixonada por criar soluções inovadoras e experiências digitais excepcionais. Com experiência em desenvolvimento web e mobile, busco sempre aprender novas tecnologias e aprimorar minhas habilidades.",
             "downloadCV": "Baixar CV",
             "linkedin": "LinkedIn",
-            "github": "GitHub"
+            "github": "GitHub",
+            "profileAlt": "Desenvolvedora"
         },
         "skills": {
             "title": "Minhas Habilidades",
@@ -25,33 +30,27 @@
             "categories": {
                 "frontend": {
                     "title": "Frontend",
-                    "description": "HTML, CSS, JavaScript, React, Vue.js",
-                    "level": 90
+                    "description": "HTML, CSS, JavaScript, React, Tailwind"
                 },
                 "backend": {
                     "title": "Backend",
-                    "description": "Node.js, Python, Java, SQL, MongoDB",
-                    "level": 85
+                    "description": "Python"
                 },
                 "mobile": {
                     "title": "Mobile",
-                    "description": "React Native, Flutter, iOS, Android",
-                    "level": 80
+                    "description": "React Native, Flutter"
                 },
                 "devops": {
                     "title": "DevOps",
-                    "description": "Docker, AWS, CI/CD, Git, Linux",
-                    "level": 75
+                    "description": "Git"
                 },
                 "design": {
                     "title": "Design",
-                    "description": "Figma, Adobe XD, UI/UX, Prototipagem",
-                    "level": 70
+                    "description": "Figma, Photoshop, UI/UX"
                 },
                 "agile": {
                     "title": "Metodologias",
-                    "description": "Scrum, Kanban, Agile, Lean",
-                    "level": 85
+                    "description": "Scrum, Kanban, Agile"
                 }
             }
         },
@@ -83,46 +82,48 @@
             ]
         },
         "certifications": {
-            "title": "Certificações",
-            "subtitle": "Certificados e conquistas profissionais",
+            "title": "Formação e Certificações",
+            "subtitle": "Formação, certificados e conquistas profissionais",
             "items": [
                 {
-                    "title": "AWS Certified Developer",
-                    "provider": "Amazon Web Services",
+                    "title": "Pós Graduação em FrontEnd Engineering",
+                    "provider": "FIAP",
+                    "year": "2025"
+                },
+                {
+                    "title": "Github Foundations",
+                    "provider": "Github",
+                    "year": "2024"
+                },
+                {
+                    "title": "MS-900 Microsoft 365 Fundamentals",
+                    "provider": "Microsoft",
+                    "year": "2024"
+                },
+                {
+                    "title": "AI-102 Azure AI Engineer Associate",
+                    "provider": "Microsoft",
                     "year": "2023"
-                },
-                {
-                    "title": "Google Cloud Professional",
-                    "provider": "Google Cloud Platform",
-                    "year": "2023"
-                },
-                {
-                    "title": "Microsoft Azure Developer",
-                    "provider": "Microsoft Azure",
-                    "year": "2022"
-                },
-                {
-                    "title": "React Developer Certification",
-                    "provider": "Meta",
-                    "year": "2022"
                 }
             ]
         },
         "contact": {
             "title": "Entre em Contato",
             "subtitle": "Vamos trabalhar juntos!",
+            "sending": "Enviando...",
+            "successMessage": "Mensagem enviada com sucesso!",
             "info": {
                 "email": {
                     "title": "E-mail",
-                    "value": "seu@email.com"
+                    "value": "priscillacdelfino@gmail.com"
                 },
                 "linkedin": {
                     "title": "LinkedIn",
-                    "value": "linkedin.com/in/seuperfil"
+                    "value": "linkedin.com/in/priscilla-correa"
                 },
                 "github": {
                     "title": "GitHub",
-                    "value": "github.com/seuperfil"
+                    "value": "github.com/prissycorrea"
                 }
             },
             "form": {
@@ -131,18 +132,19 @@
                 "email": "E-mail",
                 "emailPlaceholder": "Digite seu e-mail",
                 "message": "Mensagem",
-                "messagePlaceholder": "Digite sua mensagem...",
+                "messagePlaceholder": "Digite sua mensagem",
                 "send": "Enviar Mensagem"
             }
         },
         "footer": {
-            "madeWith": "Feito com ❤️ por",
-            "name": "Seu Nome"
-        }
+            "madeWith": "",
+            "name": ""
+        },
+        "pageTitle": "Priscilla Correa - Desenvolvedora"
     },
     "en": {
         "nav": {
-            "logo": "Portfolio",
+            "logo": "",
             "menu": {
                 "home": "Home",
                 "about": "About",
@@ -152,13 +154,18 @@
                 "contact": "Contact"
             }
         },
+        "languageToggle": {
+            "pt": "PT",
+            "en": "EN"
+        },
         "hero": {
-            "name": "Your Name",
-            "title": "Full Stack Developer",
+            "name": "Priscilla Correa",
+            "title": "Developer",
             "description": "Hello! I'm a passionate developer who loves creating innovative solutions and exceptional digital experiences. With experience in web and mobile development, I'm always seeking to learn new technologies and improve my skills.",
             "downloadCV": "Download CV",
             "linkedin": "LinkedIn",
-            "github": "GitHub"
+            "github": "GitHub",
+            "profileAlt": "Developer"
         },
         "skills": {
             "title": "My Skills",
@@ -166,33 +173,27 @@
             "categories": {
                 "frontend": {
                     "title": "Frontend",
-                    "description": "HTML, CSS, JavaScript, React, Vue.js",
-                    "level": 90
+                    "description": "HTML, CSS, JavaScript, React, Tailwind"
                 },
                 "backend": {
                     "title": "Backend",
-                    "description": "Node.js, Python, Java, SQL, MongoDB",
-                    "level": 85
+                    "description": "Python"
                 },
                 "mobile": {
                     "title": "Mobile",
-                    "description": "React Native, Flutter, iOS, Android",
-                    "level": 80
+                    "description": "React Native, Flutter"
                 },
                 "devops": {
                     "title": "DevOps",
-                    "description": "Docker, AWS, CI/CD, Git, Linux",
-                    "level": 75
+                    "description": "Git"
                 },
                 "design": {
                     "title": "Design",
-                    "description": "Figma, Adobe XD, UI/UX, Prototyping",
-                    "level": 70
+                    "description": "Figma, Photoshop, UI/UX"
                 },
                 "agile": {
                     "title": "Methodologies",
-                    "description": "Scrum, Kanban, Agile, Lean",
-                    "level": 85
+                    "description": "Scrum, Kanban, Agile"
                 }
             }
         },
@@ -228,42 +229,44 @@
             "subtitle": "Professional certificates and achievements",
             "items": [
                 {
-                    "title": "AWS Certified Developer",
-                    "provider": "Amazon Web Services",
+                    "title": "Postgraduate Degree FrontEnd Engineering",
+                    "provider": "FIAP",
+                    "year": "2025"
+                },
+                {
+                    "title": "Github Foundations",
+                    "provider": "Github",
+                    "year": "2024"
+                },
+                {
+                    "title": "MS-900 Microsoft 365 Fundamentals",
+                    "provider": "Microsoft",
+                    "year": "2024"
+                },
+                {
+                    "title": "AI-102 Azure AI Engineer Associate",
+                    "provider": "Microsoft",
                     "year": "2023"
-                },
-                {
-                    "title": "Google Cloud Professional",
-                    "provider": "Google Cloud Platform",
-                    "year": "2023"
-                },
-                {
-                    "title": "Microsoft Azure Developer",
-                    "provider": "Microsoft Azure",
-                    "year": "2022"
-                },
-                {
-                    "title": "React Developer Certification",
-                    "provider": "Meta",
-                    "year": "2022"
                 }
             ]
         },
         "contact": {
             "title": "Get in Touch",
             "subtitle": "Let's work together!",
+            "sending": "Sending...",
+            "successMessage": "Message sent successfully!",
             "info": {
                 "email": {
                     "title": "Email",
-                    "value": "your@email.com"
+                    "value": "priscillacdelfino@gmail.com"
                 },
                 "linkedin": {
                     "title": "LinkedIn",
-                    "value": "linkedin.com/in/yourprofile"
+                    "value": "linkedin.com/in/priscilla-correa"
                 },
                 "github": {
                     "title": "GitHub",
-                    "value": "github.com/yourprofile"
+                    "value": "github.com/prissycorrea"
                 }
             },
             "form": {
@@ -272,13 +275,14 @@
                 "email": "Email",
                 "emailPlaceholder": "Enter your email",
                 "message": "Message",
-                "messagePlaceholder": "Type your message...",
+                "messagePlaceholder": "Type your message",
                 "send": "Send Message"
             }
         },
         "footer": {
-            "madeWith": "Made with ❤️ by",
-            "name": "Your Name"
-        }
+            "madeWith": "",
+            "name": ""
+        },
+        "pageTitle": "Priscilla Correa - Developer"
     }
 }

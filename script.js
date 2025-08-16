@@ -68,7 +68,21 @@ function updatePageLanguage(language) {
         }
         
         if (textValue && textValue !== textKey) {
-            element.textContent = textValue;
+            // Verificar se o elemento é um botão com ícone
+            const hasIcon = element.querySelector('i');
+            const hasSpan = element.querySelector('span');
+            if (hasIcon && hasSpan) {
+                // Se tem ícone e span, preservar o ícone e atualizar apenas o span
+                const icon = hasIcon.outerHTML;
+                element.innerHTML = icon + `<span>${textValue}</span>`;
+            } else if (hasIcon) {
+                // Se tem apenas ícone, preservar o ícone e atualizar o texto
+                const icon = hasIcon.outerHTML;
+                element.innerHTML = icon + textValue;
+            } else {
+                // Se não tem ícone, atualizar normalmente
+                element.textContent = textValue;
+            }
         }
     });
     
@@ -92,6 +106,48 @@ function updatePageLanguage(language) {
             input.placeholder = placeholderValue;
         }
     });
+    
+    // Atualizar título da página
+    const pageTitle = document.querySelector('title[data-text]');
+    if (pageTitle) {
+        const titleKey = pageTitle.getAttribute('data-text');
+        const titlePath = titleKey.split('.');
+        let titleValue = languageData[language];
+        
+        for (const key of titlePath) {
+            if (titleValue && titleValue[key]) {
+                titleValue = titleValue[key];
+            } else {
+                titleValue = titleKey;
+                break;
+            }
+        }
+        
+        if (titleValue && titleValue !== titleKey) {
+            pageTitle.textContent = titleValue;
+        }
+    }
+    
+    // Atualizar atributo alt da imagem
+    const profileImage = document.querySelector('img[data-alt]');
+    if (profileImage) {
+        const altKey = profileImage.getAttribute('data-alt');
+        const altPath = altKey.split('.');
+        let altValue = languageData[language];
+        
+        for (const key of altPath) {
+            if (altValue && altValue[key]) {
+                altValue = altValue[key];
+            } else {
+                altValue = altKey;
+                break;
+            }
+        }
+        
+        if (altValue && altValue !== altKey) {
+            profileImage.alt = altValue;
+        }
+    }
 }
 
 // Inicializar animações
@@ -215,13 +271,13 @@ function initializeForm() {
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${languageData[currentLanguage].contact.sending}`;
             submitBtn.disabled = true;
             
             // Simular delay de envio
             setTimeout(() => {
                 // Mostrar mensagem de sucesso
-                showNotification('Mensagem enviada com sucesso!', 'success');
+                showNotification(languageData[currentLanguage].contact.successMessage, 'success');
                 
                 // Resetar formulário
                 contactForm.reset();
