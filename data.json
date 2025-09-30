@@ -1,4 +1,12 @@
 {
+    "links": {
+        "certifications": [
+            "https://postech.fiap.com.br/curso/front-end-engineering/",
+            "https://www.credly.com/badges/9210e76d-bf80-456b-be2c-485fc21cdc78/linked_in?t=sjm5js",
+            "https://learn.microsoft.com/api/credentials/share/pt-br/PriscillaCorreaDelfino-5070/36D623FEA279CC55?sharingId=12A8D25F34113FEB",
+            "https://learn.microsoft.com/api/credentials/share/pt-br/PriscillaCorreaDelfino-5070/EA96137778B0BC92?sharingId=12A8D25F34113FEB"
+        ]
+    },
     "pt-br": {
         "nav": {
             "logo": "",
@@ -30,27 +38,27 @@
             "categories": {
                 "frontend": {
                     "title": "Frontend",
-                    "description": "HTML, CSS, JavaScript, React, Tailwind"
-                },
-                "backend": {
-                    "title": "Backend",
-                    "description": "Python"
+                    "description": "Next.js, React, JavaScript, HTML, CSS, TypeScript, Tailwind, Styled Components"
                 },
                 "mobile": {
                     "title": "Mobile",
                     "description": "React Native, Flutter"
                 },
-                "devops": {
-                    "title": "DevOps",
-                    "description": "Git"
+                "backend": {
+                    "title": "Backend",
+                    "description": "Python, JSON, SQLite"
                 },
                 "design": {
                     "title": "Design",
                     "description": "Figma, Photoshop, UI/UX"
                 },
-                "agile": {
-                    "title": "Metodologias",
-                    "description": "Scrum, Kanban, Agile"
+                "devops": {
+                    "title": "DevOps & Versionamento",
+                    "description": "Git, Github, Azure DevOps"
+                },
+                "tools": {
+                    "title": "Ferramentas",
+                    "description": "Postman, Insomnia, SharePoint, VS Code"
                 }
             }
         },
@@ -110,8 +118,6 @@
         "contact": {
             "title": "Entre em Contato",
             "subtitle": "Vamos trabalhar juntos!",
-            "sending": "Enviando...",
-            "successMessage": "Mensagem enviada com sucesso!",
             "info": {
                 "email": {
                     "title": "E-mail",
@@ -125,15 +131,6 @@
                     "title": "GitHub",
                     "value": "github.com/prissycorrea"
                 }
-            },
-            "form": {
-                "name": "Nome",
-                "namePlaceholder": "Digite seu nome completo",
-                "email": "E-mail",
-                "emailPlaceholder": "Digite seu e-mail",
-                "message": "Mensagem",
-                "messagePlaceholder": "Digite sua mensagem",
-                "send": "Enviar Mensagem"
             }
         },
         "footer": {
@@ -173,27 +170,27 @@
             "categories": {
                 "frontend": {
                     "title": "Frontend",
-                    "description": "HTML, CSS, JavaScript, React, Tailwind"
-                },
-                "backend": {
-                    "title": "Backend",
-                    "description": "Python"
+                    "description": "Next.js, React, JavaScript, HTML, CSS, TypeScript, Tailwind, Styled Components"
                 },
                 "mobile": {
                     "title": "Mobile",
                     "description": "React Native, Flutter"
                 },
-                "devops": {
-                    "title": "DevOps",
-                    "description": "Git"
+                "backend": {
+                    "title": "Backend",
+                    "description": "Python, JSON, SQLite"
                 },
                 "design": {
                     "title": "Design",
                     "description": "Figma, Photoshop, UI/UX"
                 },
-                "agile": {
-                    "title": "Methodologies",
-                    "description": "Scrum, Kanban, Agile"
+                "devops": {
+                    "title": "DevOps & Version Control",
+                    "description": "Git, Github, Azure DevOps"
+                },
+                "tools": {
+                    "title": "Ferramentas",
+                    "description": "Postman, Insomnia, SharePoint, VS Code"
                 }
             }
         },
@@ -231,7 +228,7 @@
                 {
                     "title": "Postgraduate Degree FrontEnd Engineering",
                     "provider": "FIAP",
-                    "year": "2025"
+                    "year": "2025-2026"
                 },
                 {
                     "title": "Github Foundations",
@@ -246,7 +243,7 @@
                 {
                     "title": "AI-102 Azure AI Engineer Associate",
                     "provider": "Microsoft",
-                    "year": "2023"
+                    "year": "2024"
                 }
             ]
         },
@@ -268,15 +265,6 @@
                     "title": "GitHub",
                     "value": "github.com/prissycorrea"
                 }
-            },
-            "form": {
-                "name": "Name",
-                "namePlaceholder": "Enter your full name",
-                "email": "Email",
-                "emailPlaceholder": "Enter your email",
-                "message": "Message",
-                "messagePlaceholder": "Type your message",
-                "send": "Send Message"
             }
         },
         "footer": {

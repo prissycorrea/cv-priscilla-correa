@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loadLanguageData();
     initializeAnimations();
     initializeNavigation();
-    initializeForm();
+    initializeContact();
     initializeMobileMenu();
+    initializeAppleEffects();
 });
 
 // Carregar dados de idioma
@@ -36,16 +37,98 @@ async function loadLanguageData() {
 
 // Trocar idioma
 function toggleLanguage() {
-    // Alterna o estado lógico
-    currentLanguage = currentLanguage === 'pt-br' ? 'en' : 'pt-br';
-    updatePageLanguage(currentLanguage);
-  
-    // Liga/desliga a classe que anima o knob
-    languageToggle.classList.toggle('is-en', currentLanguage === 'en');
-  
-    // Atualiza o atributo lang
-    document.documentElement.lang = currentLanguage;
-  }
+    // Efeito de onda no toggle
+    languageToggle.classList.add('animating');
+    setTimeout(() => {
+        languageToggle.classList.remove('animating');
+    }, 300);
+    
+    // Criar efeito de partículas
+    createLanguageTransitionParticles();
+    
+    // Efeito de transição antes de trocar o idioma
+    const body = document.body;
+    const allElements = document.querySelectorAll('[data-text]');
+    
+    // Adicionar classe de transição
+    body.classList.add('language-transition');
+    
+    // Fade out dos elementos
+    allElements.forEach((element, index) => {
+        element.style.transition = 'all 0.15s ease';
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(10px)';
+    });
+    
+    // Após o fade out, trocar o idioma
+    setTimeout(() => {
+        // Alterna o estado lógico
+        currentLanguage = currentLanguage === 'pt-br' ? 'en' : 'pt-br';
+        updatePageLanguage(currentLanguage);
+        
+        // Liga/desliga a classe que anima o knob
+        languageToggle.classList.toggle('is-en', currentLanguage === 'en');
+        
+        // Atualiza o atributo lang
+        document.documentElement.lang = currentLanguage;
+        
+        // Fade in dos elementos com delay escalonado mais rápido
+        allElements.forEach((element, index) => {
+            setTimeout(() => {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, index * 20); // Delay escalonado reduzido para 20ms
+        });
+        
+        // Remover classe de transição após animação
+        setTimeout(() => {
+            body.classList.remove('language-transition');
+            allElements.forEach(element => {
+                element.style.transition = '';
+                element.style.opacity = '';
+                element.style.transform = '';
+            });
+        }, 400);
+        
+    }, 150);
+}
+
+// Criar partículas durante a transição de idioma
+function createLanguageTransitionParticles() {
+    const particleCount = 12;
+    const toggleRect = languageToggle.getBoundingClientRect();
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        const randomX = (Math.random() - 0.5) * 200;
+        const randomY = (Math.random() - 0.5) * 200;
+        
+        particle.className = 'language-particle';
+        particle.style.cssText = `
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            left: ${toggleRect.left + toggleRect.width / 2}px;
+            top: ${toggleRect.top + toggleRect.height / 2}px;
+            --particle-x: ${randomX}px;
+            --particle-y: ${randomY}px;
+            animation: languageParticle 1s ease-out forwards;
+        `;
+        
+        document.body.appendChild(particle);
+        
+        // Remover partícula após animação
+        setTimeout(() => {
+            if (particle.parentNode) {
+                particle.parentNode.removeChild(particle);
+            }
+        }, 500);
+    }
+}
   
 
 // Atualizar idioma da página
@@ -125,6 +208,39 @@ function updatePageLanguage(language) {
         
         if (titleValue && titleValue !== titleKey) {
             pageTitle.textContent = titleValue;
+        }
+    }
+    
+    // Atualizar links das certificações dinamicamente
+    updateCertificationLinks(language);
+    
+    // Atualizar link do CV dinamicamente
+    updateCVLink(language);
+}
+
+// Função para atualizar links das certificações dinamicamente
+function updateCertificationLinks(language) {
+    const certificationCards = document.querySelectorAll('.certification-card');
+    const certificationLinks = languageData.links?.certifications;
+    
+    if (certificationLinks && certificationCards.length === certificationLinks.length) {
+        certificationCards.forEach((card, index) => {
+            if (certificationLinks[index]) {
+                card.href = certificationLinks[index];
+            }
+        });
+    }
+}
+
+// Função para atualizar link do CV dinamicamente
+function updateCVLink(language) {
+    const cvButton = document.querySelector('.btn[data-text="hero.downloadCV"]');
+    
+    if (cvButton) {
+        if (language === 'pt-br') {
+            cvButton.href = 'https://drive.google.com/file/d/1wbBFps8LTAWtD_HHAV2Nbhnsy9VJORb8/view';
+        } else if (language === 'en') {
+            cvButton.href = 'https://drive.google.com/file/d/1yBt47bnCwwJs4DHnVLFoFe7sjDsoVwoA/view';
         }
     }
     
@@ -215,17 +331,23 @@ function initializeNavigation() {
     // Navegação suave
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+            const href = link.getAttribute('href');
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70; // Ajustar para o header fixo
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Só interceptar links internos (que começam com #)
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 70; // Ajustar para o header fixo
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // Links externos (http/https) serão deixados funcionar normalmente
         });
     });
     
@@ -253,39 +375,54 @@ function initializeNavigation() {
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const shapes = document.querySelectorAll('.shape');
+        const techIcons = document.querySelectorAll('.tech-icon');
         
         shapes.forEach((shape, index) => {
             const speed = 0.5 + (index * 0.1);
             shape.style.transform = `translateY(${scrolled * speed}px)`;
         });
+        
+        // Parallax nos ícones de tecnologia
+        techIcons.forEach((icon, index) => {
+            const speed = 0.2 + (index * 0.05);
+            const yPos = -(scrolled * speed);
+            icon.style.transform = `translateY(${yPos}px)`;
+        });
     });
 }
 
-// Inicializar formulário de contato
-function initializeForm() {
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+// Inicializar funcionalidades de contato
+function initializeContact() {
+    const emailContact = document.getElementById('emailContact');
+    
+    if (emailContact) {
+        emailContact.addEventListener('click', async function() {
+            const email = 'priscillacdelfino@gmail.com';
+            const copyIcon = emailContact.querySelector('.contact-copy-icon i');
             
-            // Simular envio do formulário
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
+            // Animação do ícone
+            copyIcon.style.transform = 'scale(1.2)';
+            copyIcon.style.color = '#A78BFA'; // Lilás claro para sucesso
             
-            submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${languageData[currentLanguage].contact.sending}`;
-            submitBtn.disabled = true;
+            try {
+                await navigator.clipboard.writeText(email);
+                showNotification('Email copiado para a área de transferência!', 'success');
+            } catch (err) {
+                // Fallback para navegadores mais antigos
+                const textArea = document.createElement('textarea');
+                textArea.value = email;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showNotification('Email copiado para a área de transferência!', 'success');
+            }
             
-            // Simular delay de envio
+            // Resetar animação após 1 segundo
             setTimeout(() => {
-                // Mostrar mensagem de sucesso
-                showNotification(languageData[currentLanguage].contact.successMessage, 'success');
-                
-                // Resetar formulário
-                contactForm.reset();
-                
-                // Restaurar botão
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
+                copyIcon.style.transform = 'scale(1)';
+                copyIcon.style.color = '';
+            }, 1000);
         });
     }
 }
@@ -434,7 +571,7 @@ notificationStyles.textContent = `
     }
     
     .notification-success .notification-content i {
-        color: #10B981;
+        color: #A78BFA;
     }
     
     .notification-error .notification-content i {
@@ -459,7 +596,9 @@ mobileMenuStyles.textContent = `
             top: 100%;
             left: 0;
             right: 0;
-            background: var(--bg-primary);
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-top: 1px solid rgba(139, 92, 246, 0.2);
             padding: 1rem 0;
             box-shadow: var(--shadow-lg);
@@ -481,3 +620,143 @@ mobileMenuStyles.textContent = `
 `;
 
 document.head.appendChild(mobileMenuStyles);
+
+// Efeitos Apple-style
+function initializeAppleEffects() {
+    // Efeito de scroll na navbar
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        // Efeito parallax nas formas flutuantes
+        const scrolled = window.pageYOffset;
+        const shapes = document.querySelectorAll('.shape');
+        
+        shapes.forEach((shape, index) => {
+            const speed = 0.3 + (index * 0.1);
+            const yPos = -(scrolled * speed);
+            shape.style.transform = `translateY(${yPos}px)`;
+        });
+        
+        lastScrollY = currentScrollY;
+    });
+    
+    // Efeito de hover nos cards com timing Apple
+    const cards = document.querySelectorAll('.skill-card, .project-card, .certification-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) scale(1.02)';
+            this.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+    
+    // Efeito de digitação suave no nome
+    const heroName = document.querySelector('.hero-name');
+    if (heroName) {
+        const text = heroName.textContent;
+        heroName.textContent = '';
+        heroName.style.opacity = '1';
+        
+        let i = 0;
+        const typeWriter = () => {
+            if (i < text.length) {
+                heroName.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 80);
+            }
+        };
+        
+        setTimeout(typeWriter, 1000);
+    }
+    
+    // Efeito de shimmer nos botões
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.background = 'linear-gradient(45deg, #8B5CF6, #E879F9, #8B5CF6)';
+            this.style.backgroundSize = '200% 200%';
+            this.style.animation = 'shimmer 1.5s ease-in-out';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.background = '';
+            this.style.backgroundSize = '';
+            this.style.animation = '';
+        });
+    });
+    
+    // Efeito de parallax suave nas seções
+    const sections = document.querySelectorAll('section');
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.transform = 'translateY(0)';
+                entry.target.style.opacity = '1';
+            }
+        });
+    }, observerOptions);
+    
+    sections.forEach(section => {
+        section.style.transform = 'translateY(50px)';
+        section.style.opacity = '0.8';
+        section.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        sectionObserver.observe(section);
+    });
+    
+    // Cursor personalizado com cores lilás
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    cursor.style.cssText = `
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.8), rgba(232, 121, 249, 0.4));
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.1s ease;
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+    `;
+    document.body.appendChild(cursor);
+    
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX - 10 + 'px';
+        cursor.style.top = e.clientY - 10 + 'px';
+    });
+    
+    // Efeito de cursor em elementos interativos
+    const interactiveElements = document.querySelectorAll('a, button, .card, .contact-item, .certification-card');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(2)';
+            cursor.style.background = 'radial-gradient(circle, rgba(139, 92, 246, 0.3), rgba(232, 121, 249, 0.2))';
+            cursor.style.boxShadow = '0 0 30px rgba(139, 92, 246, 0.3)';
+            cursor.style.opacity = '0.6';
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            cursor.style.background = 'radial-gradient(circle, rgba(139, 92, 246, 0.8), rgba(232, 121, 249, 0.4))';
+            cursor.style.boxShadow = '0 0 20px rgba(139, 92, 246, 0.5)';
+            cursor.style.opacity = '1';
+        });
+    });
+}
