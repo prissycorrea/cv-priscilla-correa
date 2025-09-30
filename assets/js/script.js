@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Carregar dados de idioma
 async function loadLanguageData() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('assets/data/data.json');
         languageData = await response.json();
         updatePageLanguage(currentLanguage);
     } catch (error) {
