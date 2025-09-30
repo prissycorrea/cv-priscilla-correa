@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-text="pageTitle">Portfólio - Desenvolvedor Full Stack</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Menu Superior Fixo -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-code"></i>
+          <span data-text="nav.logo"></span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link" data-section="home" data-text="nav.menu.home"></a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link" data-section="skills" data-text="nav.menu.skills"></a>
+          </li>
+          <!-- Projetos removido temporariamente -->
+          <!--
+          <li class="nav-item">
+            <a href="#projects" class="nav-link" data-section="projects" data-text="nav.menu.projects"></a>
+          </li>
+          -->
+          <li class="nav-item">
+            <a
+              href="#certifications"
+              class="nav-link"
+              data-section="certifications"
+              data-text="nav.menu.certifications"
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-section="contact" data-text="nav.menu.contact"></a>
+          </li>
+        </ul>
+        <div class="nav-toggle">
+            <button class="language-toggle" id="languageToggle" aria-label="Alternar idioma">
+                <div class="toggle-slider">
+                  <span class="toggle-text" data-text="languageToggle.pt">PT</span>
+                  <span class="toggle-text" data-text="languageToggle.en">EN</span>
+                  <span class="toggle-knob" aria-hidden="true"></span>
+                </div>
+              </button>
+              
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seção Hero/About -->
+    <section id="home" class="hero-section">
+      <!-- Ícones de tecnologias flutuantes -->
+      <div class="floating-tech-icons">
+        <!-- Primeira rodada -->
+        <div class="tech-icon tech-icon-1" data-tech="html">
+          <i class="fab fa-html5"></i>
+        </div>
+        <div class="tech-icon tech-icon-2" data-tech="css">
+          <i class="fab fa-css3-alt"></i>
+        </div>
+        <div class="tech-icon tech-icon-3" data-tech="react">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-4" data-tech="nextjs">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-5" data-tech="python">
+          <i class="fab fa-python"></i>
+        </div>
+        <div class="tech-icon tech-icon-6" data-tech="git">
+          <i class="fab fa-git-alt"></i>
+        </div>
+        <div class="tech-icon tech-icon-7" data-tech="github">
+          <i class="fab fa-github"></i>
+        </div>
+        <div class="tech-icon tech-icon-8" data-tech="azure">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <div class="tech-icon tech-icon-9" data-tech="figma">
+          <i class="fab fa-figma"></i>
+        </div>
+        <div class="tech-icon tech-icon-10" data-tech="photoshop">
+          <i class="fab fa-adobe"></i>
+        </div>
+        <div class="tech-icon tech-icon-11" data-tech="react-native">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-12" data-tech="flutter">
+          <i class="fab fa-flutter"></i>
+        </div>
+        <div class="tech-icon tech-icon-13" data-tech="tailwind">
+          <i class="fab fa-css3-alt"></i>
+        </div>
+        
+        <!-- Segunda rodada -->
+        <div class="tech-icon tech-icon-14" data-tech="html">
+          <i class="fab fa-html5"></i>
+        </div>
+        <div class="tech-icon tech-icon-15" data-tech="css">
+          <i class="fab fa-css3-alt"></i>
+        </div>
+        <div class="tech-icon tech-icon-16" data-tech="react">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-17" data-tech="nextjs">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-18" data-tech="python">
+          <i class="fab fa-python"></i>
+        </div>
+        <div class="tech-icon tech-icon-19" data-tech="git">
+          <i class="fab fa-git-alt"></i>
+        </div>
+        <div class="tech-icon tech-icon-20" data-tech="github">
+          <i class="fab fa-github"></i>
+        </div>
+        <div class="tech-icon tech-icon-21" data-tech="azure">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <div class="tech-icon tech-icon-22" data-tech="figma">
+          <i class="fab fa-figma"></i>
+        </div>
+        <div class="tech-icon tech-icon-23" data-tech="photoshop">
+          <i class="fab fa-adobe"></i>
+        </div>
+        <div class="tech-icon tech-icon-24" data-tech="react-native">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-25" data-tech="flutter">
+          <i class="fab fa-flutter"></i>
+        </div>
+        <div class="tech-icon tech-icon-26" data-tech="tailwind">
+          <i class="fab fa-css3-alt"></i>
+        </div>
+        
+        <!-- Terceira rodada -->
+        <div class="tech-icon tech-icon-27" data-tech="html">
+          <i class="fab fa-html5"></i>
+        </div>
+        <div class="tech-icon tech-icon-28" data-tech="css">
+          <i class="fab fa-css3-alt"></i>
+        </div>
+        <div class="tech-icon tech-icon-29" data-tech="react">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-30" data-tech="nextjs">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-31" data-tech="python">
+          <i class="fab fa-python"></i>
+        </div>
+        <div class="tech-icon tech-icon-32" data-tech="git">
+          <i class="fab fa-git-alt"></i>
+        </div>
+        <div class="tech-icon tech-icon-33" data-tech="github">
+          <i class="fab fa-github"></i>
+        </div>
+        <div class="tech-icon tech-icon-34" data-tech="azure">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <div class="tech-icon tech-icon-35" data-tech="figma">
+          <i class="fab fa-figma"></i>
+        </div>
+        <div class="tech-icon tech-icon-36" data-tech="photoshop">
+          <i class="fab fa-adobe"></i>
+        </div>
+        <div class="tech-icon tech-icon-37" data-tech="react-native">
+          <i class="fab fa-react"></i>
+        </div>
+        <div class="tech-icon tech-icon-38" data-tech="flutter">
+          <i class="fab fa-flutter"></i>
+        </div>
+        <div class="tech-icon tech-icon-39" data-tech="tailwind">
+          <i class="fab fa-css3-alt"></i>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1
+              class="hero-name reveal reveal-slide-up"
+              data-text="hero.name"
+              data-delay="0"
+            ></h1>
+            <h2
+              class="hero-title reveal reveal-slide-up"
+              data-text="hero.title"
+              data-delay="1"
+            ></h2>
+            <p
+              class="hero-description reveal reveal-slide-up"
+              data-text="hero.description"
+              data-delay="2"
+            ></p>
+
+            <div class="hero-buttons reveal reveal-slide-up" data-delay="3">
+              <a href="https://drive.google.com/file/d/1wbBFps8LTAWtD_HHAV2Nbhnsy9VJORb8/view" target="_blank" class="btn btn-primary" data-text="hero.downloadCV">
+                <i class="fas fa-download"></i>
+                <span></span>
+              </a>
+              <a href="https://linkedin.com/in/priscilla-correa" target="_blank" class="btn btn-secondary" data-text="hero.linkedin">
+                <i class="fab fa-linkedin"></i>
+                <span></span>
+              </a>
+              <a href="https://github.com/prissycorrea" target="_blank" class="btn btn-secondary" data-text="hero.github">
+                <i class="fab fa-github"></i>
+                <span></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Segunda coluna: imagem -->
+          <div class="hero-image reveal reveal-slide-down" data-delay="4">
+            <div class="floating-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+              <div class="shape shape-4"></div>
+              <div class="shape shape-5"></div>
+            </div>
+            <div class="profile-image">
+              <img
+                src="https://cv-priscilla-correa.vercel.app/static/media/programming_girl01.60ba9e19e15a0253e0af.png"
+                alt=""
+                class="profile-photo"
+                data-alt="hero.profileAlt"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Skills -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header reveal reveal-fade">
+          <h2 class="section-title" data-text="skills.title"></h2>
+          <p class="section-subtitle" data-text="skills.subtitle"></p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card" data-skill="frontend">
+            <div class="skill-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 data-text="skills.categories.frontend.title"></h3>
+            <p data-text="skills.categories.frontend.description"></p>
+          </div>
+          <div
+            class="skill-card reveal reveal-up"
+            data-skill="mobile"
+            data-delay="2"
+          >
+            <div class="skill-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 data-text="skills.categories.mobile.title"></h3>
+            <p data-text="skills.categories.mobile.description"></p>
+          </div>
+          <div
+            class="skill-card reveal reveal-up"
+            data-skill="backend"
+            data-delay="1"
+          >
+            <div class="skill-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 data-text="skills.categories.backend.title"></h3>
+            <p data-text="skills.categories.backend.description"></p>
+          </div>
+          <div
+            class="skill-card reveal reveal-up"
+            data-skill="devops"
+            data-delay="3"
+          >
+            <div class="skill-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3 data-text="skills.categories.devops.title"></h3>
+            <p data-text="skills.categories.devops.description"></p>
+          </div>
+          <div
+            class="skill-card reveal reveal-up"
+            data-skill="design"
+            data-delay="4"
+          >
+            <div class="skill-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3 data-text="skills.categories.design.title"></h3>
+            <p data-text="skills.categories.design.description"></p>
+          </div>
+          <div
+            class="skill-card reveal reveal-up"
+            data-skill="tools"
+            data-delay="5"
+          >
+            <div class="skill-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 data-text="skills.categories.tools.title"></h3>
+            <p data-text="skills.categories.tools.description"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos - COMENTADA (pode reativar depois) -->
+    <!--
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header reveal reveal-fade">
+          <h2 class="section-title" data-text="projects.title"></h2>
+          <p class="section-subtitle" data-text="projects.subtitle"></p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal reveal-left" data-delay="0">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 data-text="projects.items.0.title"></h3>
+              <p data-text="projects.items.0.description"></p>
+              <div class="project-tech">
+                <span class="tech-tag" data-text="projects.items.0.technologies.0"></span>
+                <span class="tech-tag" data-text="projects.items.0.technologies.1"></span>
+                <span class="tech-tag" data-text="projects.items.0.technologies.2"></span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  class="btn btn-small"
+                  data-text="projects.items.0.viewProject"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-small btn-outline"
+                  data-text="projects.items.0.viewCode"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal reveal-up" data-delay="1">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 data-text="projects.items.1.title"></h3>
+              <p data-text="projects.items.1.description"></p>
+              <div class="project-tech">
+                <span class="tech-tag" data-text="projects.items.1.technologies.0"></span>
+                <span class="tech-tag" data-text="projects.items.1.technologies.1"></span>
+                <span class="tech-tag" data-text="projects.items.1.technologies.2"></span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  class="btn btn-small"
+                  data-text="projects.items.1.viewProject"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-small btn-outline"
+                  data-text="projects.items.1.viewCode"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card reveal reveal-up" data-delay="1">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-chart-line"></i>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 data-text="projects.items.2.title"></h3>
+              <p data-text="projects.items.2.description"></p>
+              <div class="project-tech">
+                <span class="tech-tag" data-text="projects.items.2.technologies.0"></span>
+                <span class="tech-tag" data-text="projects.items.2.technologies.1"></span>
+                <span class="tech-tag" data-text="projects.items.2.technologies.2"></span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="#"
+                  class="btn btn-small"
+                  data-text="projects.items.2.viewProject"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-small btn-outline"
+                  data-text="projects.items.2.viewCode"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Seção Certificações -->
+    <section id="certifications" class="certifications-section">
+      <div class="container">
+        <div class="section-header reveal reveal-fade">
+          <h2 class="section-title" data-text="certifications.title"></h2>
+          <p class="section-subtitle" data-text="certifications.subtitle"></p>
+        </div>
+        <div class="certifications-grid">
+          <a href="" target="_blank" class="certification-card reveal reveal-scale" data-delay="1">
+            <div class="certification-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3 data-text="certifications.items.0.title"></h3>
+            <p data-text="certifications.items.0.provider"></p>
+            <span class="certification-date" data-text="certifications.items.0.year"></span>
+            <div class="certification-link-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+          </a>
+          <a href="" target="_blank" class="certification-card reveal reveal-scale" data-delay="2">
+            <div class="certification-icon">
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <h3 data-text="certifications.items.1.title"></h3>
+            <p data-text="certifications.items.1.provider"></p>
+            <span class="certification-date" data-text="certifications.items.1.year"></span>
+            <div class="certification-link-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+          </a>
+          <a href="" target="_blank" class="certification-card reveal reveal-scale" data-delay="3">
+            <div class="certification-icon">
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <h3 data-text="certifications.items.2.title"></h3>
+            <p data-text="certifications.items.2.provider"></p>
+            <span class="certification-date" data-text="certifications.items.2.year"></span>
+            <div class="certification-link-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+          </a>
+          <a href="" target="_blank" class="certification-card reveal reveal-scale" data-delay="4">
+            <div class="certification-icon">
+                <i class="fa-brands fa-microsoft"></i>
+            </div>
+            <h3 data-text="certifications.items.3.title"></h3>
+            <p data-text="certifications.items.3.provider"></p>
+            <span class="certification-date" data-text="certifications.items.3.year"></span>
+            <div class="certification-link-icon">
+              <i class="fas fa-external-link-alt"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-text="contact.title"></h2>
+          <p class="section-subtitle" data-text="contact.subtitle"></p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item reveal reveal-left" data-delay="0" id="emailContact">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-content-text">
+                <h3 data-text="contact.info.email.title"></h3>
+                <p data-text="contact.info.email.value"></p>
+              </div>
+              <div class="contact-copy-icon">
+                <i class="fas fa-copy"></i>
+              </div>
+            </div>
+            <a href="https://linkedin.com/in/priscilla-correa" target="_blank" class="contact-item reveal reveal-left" data-delay="1">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-content-text">
+                <h3 data-text="contact.info.linkedin.title"></h3>
+                <p data-text="contact.info.linkedin.value"></p>
+              </div>
+              <div class="contact-link-icon">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </a>
+            <a href="https://github.com/prissycorrea" target="_blank" class="contact-item reveal reveal-left" data-delay="2">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-content-text">
+                <h3 data-text="contact.info.github.title"></h3>
+                <p data-text="contact.info.github.value"></p>
+              </div>
+              <div class="contact-link-icon">
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">
+          <span data-text="footer.madeWith"></span>
+          <span class="footer-name" data-text="footer.name"></span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
