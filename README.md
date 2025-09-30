@@ -2,7 +2,7 @@
 Single Page Application bilingue desenvolvida em React JS com objetivo de tornar-se um local onde serão centralizados os dados profissionais e portfólio para uma desenvolvedora front end.
 
 ## Status do projeto
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge"/>
 
 ## Resultado
 Para ver o resultado ao vivo no navegador, [clique aqui](https://cv-priscilla-correa.vercel.app/) ou cole o link abaixo no seu navegador:
