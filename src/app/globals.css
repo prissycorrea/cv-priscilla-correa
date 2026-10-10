@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0a0f;
+  --foreground: #f5f3f7;
+  --accent-from: #d6c4ff;
+  --accent-to: #a78bfa;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(214, 196, 255, 0.35);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-from);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Gradient text matching the hero's path stroke */
+.text-gradient {
+  background: linear-gradient(90deg, var(--accent-from), var(--accent-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, var(--accent-from), var(--accent-to));
+  box-shadow: 0 8px 30px -10px rgba(167, 139, 250, 0.6);
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+}
+.btn-gradient:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 10px 40px -8px rgba(167, 139, 250, 0.75);
+}
+
+.icon-ring {
+  background:
+    linear-gradient(#16121b, #16121b) padding-box,
+    linear-gradient(135deg, var(--accent-from), var(--accent-to)) border-box;
+  border: 1px solid transparent;
+}
+
+.project-cover {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(214, 196, 255, 0.35), transparent 55%),
+    radial-gradient(circle at 75% 70%, rgba(167, 139, 250, 0.3), transparent 50%),
+    linear-gradient(var(--cover-angle, 135deg), #1a1420, #0f0c13);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.group:hover .project-cover {
+  transform: scale(1.015);
+}
+
+/* Hero: faint grid that fades out toward the edges */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 30%, transparent 75%);
+}
+
+/* Hero: infinite tech strip (two identical rows, shifted by half) */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .project-cover,
+  .btn-gradient {
+    transition: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+}
